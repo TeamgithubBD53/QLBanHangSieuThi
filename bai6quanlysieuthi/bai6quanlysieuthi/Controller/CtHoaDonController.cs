@@ -11,6 +11,6 @@ namespace bai6quanlysieuthi.Controller
 {
     class CtHoaDonController
     {
-        
+        public static object Instance { get; internal set; }
     }
 }
