@@ -16,6 +16,41 @@ namespace bai6quanlysieuthi.Views
         {
             InitializeComponent();
         }
+        #region View chi tiết hóa đơn
+        private void btnView_CTHD_Click(object sender, EventArgs e)
+        {
+            
+        }
+      
+        #endregion
+        private void btnInsert_CTHD_Click(object sender, EventArgs e)
+        {
+           
+        }
 
+        private void ViewCtHoaDon()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void btnUpdate_CTHD_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_CTHD_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExit_CTHD_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearch_CTHD_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
