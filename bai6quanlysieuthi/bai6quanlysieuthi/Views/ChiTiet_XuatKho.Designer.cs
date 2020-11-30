@@ -192,6 +192,7 @@
             this.dgvCtXuatKho.RowHeadersWidth = 51;
             this.dgvCtXuatKho.Size = new System.Drawing.Size(795, 332);
             this.dgvCtXuatKho.TabIndex = 38;
+            this.dgvCtXuatKho.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCtXuatKho_CellClick);
             // 
             // btnExit_CTXK
             // 
@@ -276,6 +277,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ChiTiet_XuatKho";
             this.Text = "Chi tiết phiếu xuất";
+
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCtXuatKho)).EndInit();

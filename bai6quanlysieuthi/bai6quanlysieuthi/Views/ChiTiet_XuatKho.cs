@@ -18,10 +18,26 @@ namespace bai6quanlysieuthi.Views
             InitializeComponent();
         }
 
+
         private void btnSearch_CTXK_Click(object sender, EventArgs e)
         {
-            errorProvider1.Clear();
-            ViewCtXuatKho();
+            if (cbMaMatHang.Text == "" && cbMaXuat.Text == "")
+            {
+                if (cbMaMatHang.Text == "")
+                    errorProvider1.SetError(cbMaMatHang, "Chưa có mã hàng cần tìm");
+                if (cbMaXuat.Text == "")
+                    errorProvider1.SetError(cbMaXuat, "Chưa có mã xuất cần tìm");
+                MessageBox.Show("Phải nhập vào thông tìn cần tìm");
+                return;
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+            if (cbMaXuat.Text != "" || cbMaMatHang.Text != "")
+            {
+                dgvCtXuatKho.DataSource = CtXuatKhoController.Instance.SearchCtXuat(cbMaXuat.Text, cbMaMatHang.Text);
+            }
         }
         void ViewCtXuatKho()
         {
@@ -155,5 +171,16 @@ namespace bai6quanlysieuthi.Views
                 return;
             }
         }
+
+        private void dgvCtXuatKho_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtSTT.Text = dgvCtXuatKho.CurrentRow.Cells[0].Value.ToString();
+            cbMaXuat.Text = dgvCtXuatKho.CurrentRow.Cells[1].Value.ToString();
+            cbMaMatHang.Text = dgvCtXuatKho.CurrentRow.Cells[2].Value.ToString();
+            txtSoLuong.Text = dgvCtXuatKho.CurrentRow.Cells[3].Value.ToString();
+            txtDonGia.Text = dgvCtXuatKho.CurrentRow.Cells[4].Value.ToString();
+        }
+
+
     }
 }
