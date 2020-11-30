@@ -407,6 +407,7 @@
             this.btnDelete_KH.TabIndex = 15;
             this.btnDelete_KH.Text = "Xóa";
             this.btnDelete_KH.UseVisualStyleBackColor = false;
+            this.btnDelete_KH.Click += new System.EventHandler(this.btnDelete_KH_Click);
             // 
             // btnUpdate_KH
             // 
@@ -419,6 +420,7 @@
             this.btnUpdate_KH.TabIndex = 14;
             this.btnUpdate_KH.Text = "Sửa";
             this.btnUpdate_KH.UseVisualStyleBackColor = false;
+            this.btnUpdate_KH.Click += new System.EventHandler(this.btnUpdate_KH_Click);
             // 
             // btnInsert_KH
             // 
@@ -431,6 +433,7 @@
             this.btnInsert_KH.TabIndex = 13;
             this.btnInsert_KH.Text = "Thêm";
             this.btnInsert_KH.UseVisualStyleBackColor = false;
+            this.btnInsert_KH.Click += new System.EventHandler(this.btnInsert_KH_Click);
             // 
             // btnView_KH
             // 
@@ -443,6 +446,7 @@
             this.btnView_KH.TabIndex = 12;
             this.btnView_KH.Text = "Xem";
             this.btnView_KH.UseVisualStyleBackColor = false;
+            this.btnView_KH.Click += new System.EventHandler(this.btnView_KH_Click);
             // 
             // rtbDiaChiKho
             // 
@@ -505,6 +509,7 @@
             this.dgvKhoHang.RowHeadersWidth = 51;
             this.dgvKhoHang.Size = new System.Drawing.Size(411, 215);
             this.dgvKhoHang.TabIndex = 0;
+            this.dgvKhoHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhoHang_CellClick);
             // 
             // tabPage4
             // 
