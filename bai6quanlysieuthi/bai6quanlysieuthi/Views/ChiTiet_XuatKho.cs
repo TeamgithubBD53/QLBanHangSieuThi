@@ -17,12 +17,27 @@ namespace bai6quanlysieuthi.Views
         {
             InitializeComponent();
         }
+#region View chi tiết xuất kho
         private void btnView_CTXK_Click(object sender, EventArgs e)
         {
             errorProvider1.Clear();
             ViewCtXuatKho();
         }
-
+        void ViewCtXuatKho()
+        {
+            dgvCtXuatKho.DataSource = CtXuatKhoController.Instance.XemCtXuatKho();
+            dgvCtXuatKho.Columns["stt"].Width = 45;
+            dgvCtXuatKho.Columns["maxuat"].HeaderText = @"Mã xuất";
+            dgvCtXuatKho.Columns["maxuat"].Width = 80;
+            dgvCtXuatKho.Columns["mamathang"].HeaderText = @"Mã mặt hàng";
+            dgvCtXuatKho.Columns["mamathang"].Width = 80;
+            dgvCtXuatKho.Columns["soluong"].HeaderText = @"Số lượng";
+            dgvCtXuatKho.Columns["soluong"].Width = 80;
+            dgvCtXuatKho.Columns["dongia"].HeaderText = @"Đơng giá";
+            dgvCtXuatKho.Columns["dongia"].Width = 80;
+        }
+#endregion
+#region tim kiem chi tiết phiết xuất
         private void btnSearch_CTXK_Click(object sender, EventArgs e)
         {
             if (cbMaMatHang.Text == "" && cbMaXuat.Text == "")
@@ -43,20 +58,8 @@ namespace bai6quanlysieuthi.Views
                 dgvCtXuatKho.DataSource = CtXuatKhoController.Instance.SearchCtXuat(cbMaXuat.Text, cbMaMatHang.Text);
             }
         }
-        void ViewCtXuatKho()
-        {
-            dgvCtXuatKho.DataSource = CtXuatKhoController.Instance.XemCtXuatKho();
-            dgvCtXuatKho.Columns["stt"].Width = 45;
-            dgvCtXuatKho.Columns["maxuat"].HeaderText = @"Mã xuất";
-            dgvCtXuatKho.Columns["maxuat"].Width = 80;
-            dgvCtXuatKho.Columns["mamathang"].HeaderText = @"Mã mặt hàng";
-            dgvCtXuatKho.Columns["mamathang"].Width = 80;
-            dgvCtXuatKho.Columns["soluong"].HeaderText = @"Số lượng";
-            dgvCtXuatKho.Columns["soluong"].Width = 80;
-            dgvCtXuatKho.Columns["dongia"].HeaderText = @"Đơng giá";
-            dgvCtXuatKho.Columns["dongia"].Width = 80;
-        }
-
+        #endregion
+#region thêm chi tiết phiếu xuất kho
         private void btnInsert_CTXK_Click(object sender, EventArgs e)
         {
 
@@ -97,7 +100,8 @@ namespace bai6quanlysieuthi.Views
                 return;
             }
         }
-
+        #endregion
+#region sửa chi tiết phiết xuất
         private void btnUpdate_CTXK_Click(object sender, EventArgs e)
         {
             if (txtSTT.Text == "" || cbMaXuat.Text == "" || cbMaMatHang.Text == "" || txtSoLuong.Text == "")
@@ -140,7 +144,8 @@ namespace bai6quanlysieuthi.Views
                 return;
             }
         }
-
+        #endregion
+#region xoa chi tiết phiết xuất
         private void btnDelete_CTXK_Click(object sender, EventArgs e)
         {
             if (txtSTT.Text == "")
@@ -175,7 +180,7 @@ namespace bai6quanlysieuthi.Views
                 return;
             }
         }
-
+#endregion
         private void dgvCtXuatKho_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtSTT.Text = dgvCtXuatKho.CurrentRow.Cells[0].Value.ToString();
