@@ -11,6 +11,18 @@ namespace bai6quanlysieuthi.Controller
 {
     class CtXuatKhoController
     {
-        
+        private static CtXuatKhoController instance;
+        public static CtXuatKhoController Instance
+        {
+            get
+            {
+                if (instance == null)
+                    instance = new CtXuatKhoController();
+                return CtXuatKhoController.instance;
+            }
+            private set { CtXuatKhoController.instance = value; }
+        }
+        private CtXuatKhoController() { }
+
     }
 }
