@@ -217,6 +217,7 @@
             this.btnDelete_NV.TabIndex = 13;
             this.btnDelete_NV.Text = "Xóa";
             this.btnDelete_NV.UseVisualStyleBackColor = false;
+            this.btnDelete_NV.Click += new System.EventHandler(this.btnDelete_NV_Click);
             // 
             // btnUpdate_NV
             // 
@@ -229,6 +230,7 @@
             this.btnUpdate_NV.TabIndex = 12;
             this.btnUpdate_NV.Text = "Sửa";
             this.btnUpdate_NV.UseVisualStyleBackColor = false;
+            this.btnUpdate_NV.Click += new System.EventHandler(this.btnUpdate_NV_Click);
             // 
             // btnInsert_NV
             // 
@@ -241,6 +243,7 @@
             this.btnInsert_NV.TabIndex = 11;
             this.btnInsert_NV.Text = "Thêm";
             this.btnInsert_NV.UseVisualStyleBackColor = false;
+            this.btnInsert_NV.Click += new System.EventHandler(this.btnInsert_NV_Click);
             // 
             // btnView_NV
             // 
@@ -253,6 +256,7 @@
             this.btnView_NV.TabIndex = 10;
             this.btnView_NV.Text = "Xem";
             this.btnView_NV.UseVisualStyleBackColor = false;
+            this.btnView_NV.Click += new System.EventHandler(this.btnView_NV_Click);
             // 
             // dgvNhanVien
             // 
@@ -263,6 +267,7 @@
             this.dgvNhanVien.RowHeadersWidth = 51;
             this.dgvNhanVien.Size = new System.Drawing.Size(935, 270);
             this.dgvNhanVien.TabIndex = 9;
+            this.dgvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellClick);
             // 
             // panel2
             // 
@@ -904,18 +909,21 @@
             this.menuTrangChu.Name = "menuTrangChu";
             this.menuTrangChu.Size = new System.Drawing.Size(110, 32);
             this.menuTrangChu.Text = "Trang chủ";
+            this.menuTrangChu.Click += new System.EventHandler(this.menuTrangChu_Click);
             // 
             // menuKhachHang
             // 
             this.menuKhachHang.Name = "menuKhachHang";
             this.menuKhachHang.Size = new System.Drawing.Size(128, 32);
             this.menuKhachHang.Text = "Khách hàng";
+            this.menuKhachHang.Click += new System.EventHandler(this.menuKhachHang_Click);
             // 
             // menuHangHoa
             // 
             this.menuHangHoa.Name = "menuHangHoa";
             this.menuHangHoa.Size = new System.Drawing.Size(111, 32);
             this.menuHangHoa.Text = "Hàng hóa";
+            this.menuHangHoa.Click += new System.EventHandler(this.menuHangHoa_Click);
             // 
             // errorProvider1
             // 
