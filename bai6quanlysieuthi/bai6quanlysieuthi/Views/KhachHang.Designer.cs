@@ -113,19 +113,19 @@
             // menuTrangChu
             // 
             this.menuTrangChu.Name = "menuTrangChu";
-            this.menuTrangChu.Size = new System.Drawing.Size(110, 32);
+            this.menuTrangChu.Size = new System.Drawing.Size(108, 32);
             this.menuTrangChu.Text = "Trang chủ";
             // 
             // menuHangHoa
             // 
             this.menuHangHoa.Name = "menuHangHoa";
-            this.menuHangHoa.Size = new System.Drawing.Size(111, 32);
+            this.menuHangHoa.Size = new System.Drawing.Size(109, 32);
             this.menuHangHoa.Text = "Hàng hóa";
             // 
             // menuNhanVien
             // 
             this.menuNhanVien.Name = "menuNhanVien";
-            this.menuNhanVien.Size = new System.Drawing.Size(114, 32);
+            this.menuNhanVien.Size = new System.Drawing.Size(112, 32);
             this.menuNhanVien.Text = "Nhân viên";
             // 
             // tabControl1
@@ -427,6 +427,7 @@
             this.btnExitHD.TabIndex = 13;
             this.btnExitHD.Text = "Thoát";
             this.btnExitHD.UseVisualStyleBackColor = false;
+            this.btnExitHD.Click += new System.EventHandler(this.btnExitHD_Click);
             // 
             // btnDeleteHD
             // 
@@ -439,6 +440,7 @@
             this.btnDeleteHD.TabIndex = 11;
             this.btnDeleteHD.Text = "Xóa";
             this.btnDeleteHD.UseVisualStyleBackColor = false;
+            this.btnDeleteHD.Click += new System.EventHandler(this.btnDeleteHD_Click);
             // 
             // btnUpdateHD
             // 
@@ -451,6 +453,7 @@
             this.btnUpdateHD.TabIndex = 10;
             this.btnUpdateHD.Text = "Sửa";
             this.btnUpdateHD.UseVisualStyleBackColor = false;
+            this.btnUpdateHD.Click += new System.EventHandler(this.btnUpdateHD_Click);
             // 
             // btnInsertHD
             // 
@@ -463,6 +466,7 @@
             this.btnInsertHD.TabIndex = 9;
             this.btnInsertHD.Text = "Thêm";
             this.btnInsertHD.UseVisualStyleBackColor = false;
+            this.btnInsertHD.Click += new System.EventHandler(this.btnInsertHD_Click);
             // 
             // btnViewHD
             // 
@@ -475,6 +479,7 @@
             this.btnViewHD.TabIndex = 8;
             this.btnViewHD.Text = "Xem";
             this.btnViewHD.UseVisualStyleBackColor = false;
+            this.btnViewHD.Click += new System.EventHandler(this.btnViewHD_Click);
             // 
             // dgvHoaDon
             // 
@@ -485,6 +490,7 @@
             this.dgvHoaDon.RowHeadersWidth = 51;
             this.dgvHoaDon.Size = new System.Drawing.Size(921, 303);
             this.dgvHoaDon.TabIndex = 2;
+            this.dgvHoaDon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHoaDon_CellClick);
             // 
             // panel2
             // 
@@ -509,6 +515,7 @@
             this.btnChiTietHD.TabIndex = 1;
             this.btnChiTietHD.Text = "Chi tiết ";
             this.btnChiTietHD.UseVisualStyleBackColor = false;
+            this.btnChiTietHD.Click += new System.EventHandler(this.btnChiTietHD_Click);
             // 
             // txtSearchHD
             // 
@@ -541,6 +548,7 @@
             this.btnSearchHD.TabIndex = 0;
             this.btnSearchHD.Text = "Tìm kiếm";
             this.btnSearchHD.UseVisualStyleBackColor = false;
+            this.btnSearchHD.Click += new System.EventHandler(this.btnSearchHD_Click);
             // 
             // groupBox2
             // 
