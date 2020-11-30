@@ -23,6 +23,18 @@ namespace bai6quanlysieuthi.Controller
             private set { CtXuatKhoController.instance = value; }
         }
         private CtXuatKhoController() { }
-
+        // xem chi tiết phiếu xuất
+        public List<chitietphieuxuat> XemCtXuatKho()
+        {
+            List<chitietphieuxuat> list = new List<chitietphieuxuat>();
+            string query = "select stt,maxuat ,mamathang,soluong,dongia from chitietphieuxuat";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                chitietphieuxuat hd = new chitietphieuxuat(item);
+                list.Add(hd);
+            }
+            return list;
+        }
     }
 }
