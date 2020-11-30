@@ -264,6 +264,7 @@
             this.btnViewKh.TabIndex = 2;
             this.btnViewKh.Text = "Xem";
             this.btnViewKh.UseVisualStyleBackColor = false;
+            this.btnViewKh.Click += new System.EventHandler(this.btnViewKh_Click);
             // 
             // dgvKh
             // 
@@ -274,6 +275,7 @@
             this.dgvKh.RowHeadersWidth = 51;
             this.dgvKh.Size = new System.Drawing.Size(927, 271);
             this.dgvKh.TabIndex = 1;
+            this.dgvKh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKh_CellClick);
             // 
             // groupBox1
             // 
