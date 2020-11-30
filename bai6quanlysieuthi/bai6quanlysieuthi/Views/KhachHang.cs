@@ -19,7 +19,7 @@ namespace bai6quanlysieuthi.Views
             InitializeComponent();
         }
 
-
+        #region Hóa đơn
         #region Xem Hóa Đơn
         private void btnViewHD_Click(object sender, EventArgs e)
         {
@@ -165,19 +165,47 @@ namespace bai6quanlysieuthi.Views
         }
         #endregion
 
+        #region Tìm kiếm hóa đơn
         private void btnSearchHD_Click(object sender, EventArgs e)
         {
-
+            if (cbbSeachHD.Text == @"Mã hóa đơn")
+            {
+                if (txtSearchHD.Text != "")
+                {
+                    dgvHoaDon.DataSource = HoaDonController.Instance.SearchHd(txtSearchHD.Text);
+                }
+            }
+            else if (cbbSeachHD.Text == @"Mã nhân viên")
+            {
+                if (txtSearchHD.Text != "")
+                {
+                    dgvHoaDon.DataSource = HoaDonController.Instance.SearchHd1(txtSearchHD.Text);
+                }
+            }
+            else if (cbbSeachHD.Text == @"Mã khách hàng")
+            {
+                if (txtSearchHD.Text != "")
+                {
+                    dgvHoaDon.DataSource = HoaDonController.Instance.SearchHd2(txtSearchHD.Text);
+                }
+            }
         }
+        #endregion
 
+        #region chi tiết hóa đon
         private void btnChiTietHD_Click(object sender, EventArgs e)
         {
-
+            ChiTiet_HD f = new ChiTiet_HD();
+            f.ShowDialog();
         }
+        #endregion
 
+        #region Thoát
         private void btnExitHD_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
+        #endregion
+        #endregion
     }
 }
