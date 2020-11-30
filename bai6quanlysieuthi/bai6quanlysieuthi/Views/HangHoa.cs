@@ -18,14 +18,6 @@ namespace bai6quanlysieuthi.Views
             InitializeComponent();
         }
 
-
-
-
-
-
-
-
-
         private void HangHoa_Load(object sender, EventArgs e)
         {
 
@@ -62,7 +54,7 @@ namespace bai6quanlysieuthi.Views
             }
         }
         #endregion
-
+        #region view phiếu xuất kho
         private void btnView_XK_Click(object sender, EventArgs e)
         {
             errorProvider1.Clear();
@@ -72,18 +64,19 @@ namespace bai6quanlysieuthi.Views
         {
             dgvXK.DataSource = XuatKhoController.Instance.XemXuatKho();
             dgvXK.Columns["ma"].HeaderText = @"Mã xk";
-            dgvXK.Columns["ma"].Width = 45;
+            dgvXK.Columns["ma"].Width = 140;
             dgvXK.Columns["makhohang"].HeaderText = @"Mã kho hàng";
-            dgvXK.Columns["makhohang"].Width = 50;
+            dgvXK.Columns["makhohang"].Width = 140;
             dgvXK.Columns["ngayxuat"].HeaderText = @"Ngày xuất";
-            dgvXK.Columns["ngayxuat"].Width = 80;
+            dgvXK.Columns["ngayxuat"].Width = 140;
             dgvXK.Columns["tonggiatri"].HeaderText = @"Tổng giá trị";
-            dgvXK.Columns["tonggiatri"].Width = 80;
+            dgvXK.Columns["tonggiatri"].Width = 160;
             dgvXK.Columns["maquay"].HeaderText = @"Mã quầy";
-            dgvXK.Columns["maquay"].Width = 60;
+            dgvXK.Columns["maquay"].Width = 140;
             dgvXK.Columns["manhanvien"].HeaderText = @"Mã nv";
-            dgvXK.Columns["manhanvien"].Width = 60;
+            dgvXK.Columns["manhanvien"].Width = 140;
         }
+        #endregion
         #region thêm phiếu xuất kho
         private void btnInsert_XK_Click(object sender, EventArgs e)
         {
@@ -178,12 +171,12 @@ namespace bai6quanlysieuthi.Views
             }
         }
         #endregion
-
+        #region xoa phiếu xuất kho
         private void btnDelete_XK_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
+        #endregion
         private void btnExit_XK_Click(object sender, EventArgs e)
         {
             this.Close();
