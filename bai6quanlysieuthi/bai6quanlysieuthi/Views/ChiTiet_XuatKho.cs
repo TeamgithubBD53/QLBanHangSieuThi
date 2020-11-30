@@ -17,7 +17,11 @@ namespace bai6quanlysieuthi.Views
         {
             InitializeComponent();
         }
-
+        private void btnView_CTXK_Click(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+            ViewCtXuatKho();
+        }
 
         private void btnSearch_CTXK_Click(object sender, EventArgs e)
         {

@@ -256,6 +256,7 @@
             this.btnView_CTXK.TabIndex = 32;
             this.btnView_CTXK.Text = "Xem";
             this.btnView_CTXK.UseVisualStyleBackColor = false;
+            this.btnView_CTXK.Click += new System.EventHandler(this.btnView_CTXK_Click);
             // 
             // errorProvider1
             // 
@@ -277,7 +278,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ChiTiet_XuatKho";
             this.Text = "Chi tiết phiếu xuất";
-
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCtXuatKho)).EndInit();
