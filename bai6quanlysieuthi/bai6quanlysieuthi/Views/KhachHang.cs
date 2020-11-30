@@ -53,25 +53,117 @@ namespace bai6quanlysieuthi.Views
             txtMaKhachHang.Text = dgvHoaDon.CurrentRow.Cells[4].Value.ToString();
         }
         #endregion
+        #region Thêm hóa đơn
         private void btnInsertHD_Click(object sender, EventArgs e)
         {
-
+            if (txtMaHD.Text == "" || txtMaNhanVien.Text == "" || txtMaKhachHang.Text == "")
+            {
+                if (txtMaHD.Text == "")
+                    errorProvider1.SetError(txtMaHD, "Chưa có dữ liệu");
+                if (txtMaNhanVien.Text == "")
+                    errorProvider1.SetError(txtMaNhanVien, "Chưa có dữ liệu");
+                if (txtMaKhachHang.Text == "")
+                    errorProvider1.SetError(txtMaKhachHang, "Chưa có dữ liệu");
+                MessageBox.Show("Phải điền thông tin");
+                return;
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+            try
+            {
+                string ma = txtMaHD.Text;
+                string manv = txtMaNhanVien.Text;
+                DateTime ngaylap = (DateTime)Convert.ToDateTime(dtpNgayLap.Value.ToString("MM/dd/yyyy"));
+                string makh = txtMaKhachHang.Text;
+                if (MessageBox.Show("Bạn có muốn thêm hay không", "Thêm", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    if (HoaDonController.Instance.InsertHoaDon(ma, ngaylap, manv, makh))
+                    {
+                        ViewHoaDon();
+                        ChiTiet_HD f = new ChiTiet_HD();
+                        f.ShowDialog();
+                        MessageBox.Show("Thêm thành công!");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Không thành công");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi thêm dữ liệu");
+                return;
+            }
         }
+        #endregion
 
+        #region Sửa hóa đơn
         private void btnUpdateHD_Click(object sender, EventArgs e)
         {
-
+            if (txtMaHD.Text == "" || txtMaNhanVien.Text == "" || txtMaKhachHang.Text == "")
+            {
+                if (txtMaHD.Text == "")
+                    errorProvider1.SetError(txtMaHD, "Chưa có dữ liệu");
+                if (txtMaNhanVien.Text == "")
+                    errorProvider1.SetError(txtMaNhanVien, "Chưa có dữ liệu");
+                if (txtMaKhachHang.Text == "")
+                    errorProvider1.SetError(txtMaKhachHang, "Chưa có dữ liệu");
+                MessageBox.Show("Phải điền thông tin");
+                return;
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+            try
+            {
+                string ma = txtMaHD.Text;
+                string manv = txtMaNhanVien.Text;
+                DateTime ngaylap = (DateTime)Convert.ToDateTime(dtpNgayLap.Value.ToString("MM/dd/yyyy"));
+                string makh = txtMaKhachHang.Text;
+                if (MessageBox.Show("Bạn có muốn sửahay không", "Thêm", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    if (HoaDonController.Instance.UpdateHoaDon(ma, ngaylap, manv, makh))
+                    {
+                        MessageBox.Show("Sửa thành công!");
+                        ViewHoaDon();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Không thành công");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi thêm dữ liệu");
+                return;
+            }
         }
+        #endregion
 
+        #region Xóa hóa đơn
         private void btnDeleteHD_Click(object sender, EventArgs e)
         {
-
+            errorProvider1.Clear();
+            string ma = txtMaHD.Text;
+            if (MessageBox.Show("Bạn có muốn xóa hay không", "Xóa", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                if (HoaDonController.Instance.DeleteHoaDon(ma))
+                {
+                    MessageBox.Show("Xóa thành công!");
+                    ViewHoaDon();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Không thành công!");
+            }
         }
-
-        private void btnExitHD_Click(object sender, EventArgs e)
-        {
-
-        }
+        #endregion
 
         private void btnSearchHD_Click(object sender, EventArgs e)
         {
@@ -79,6 +171,11 @@ namespace bai6quanlysieuthi.Views
         }
 
         private void btnChiTietHD_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExitHD_Click(object sender, EventArgs e)
         {
 
         }
