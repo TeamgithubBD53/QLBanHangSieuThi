@@ -19,6 +19,35 @@ namespace bai6quanlysieuthi.Views
             InitializeComponent();
         }
 
+
+        #region menustrip
+        private void menuTrangChu_Click(object sender, EventArgs e)
+        {
+            TrangChu f = new TrangChu();
+            this.Hide();
+            f.ShowDialog();
+            this.Close();
+        }
+
+
+        private void menuHangHoa_Click(object sender, EventArgs e)
+        {
+            HangHoa f = new HangHoa();
+            this.Hide();
+            f.ShowDialog();
+            this.Close();
+        }
+
+        private void menuNhanVien_Click(object sender, EventArgs e)
+        {
+            NhanVien f = new NhanVien();
+            this.Hide();
+            f.ShowDialog();
+            this.Close();
+        }
+
+       #endregion
+
         #region Hóa đơn
         #region Xem Hóa Đơn
         private void btnViewHD_Click(object sender, EventArgs e)
@@ -100,6 +129,7 @@ namespace bai6quanlysieuthi.Views
         }
         #endregion
 
+        #endregion
 
         #region khachhang
 
@@ -262,6 +292,9 @@ namespace bai6quanlysieuthi.Views
                 if (txtSearchKh.Text != "")
                 {
                     dgvKh.DataSource = KhachhangController.Instance.SearchKh1(txtSearchKh.Text);
+                }
+            }
+        }
 
         #region Sửa hóa đơn
         private void btnUpdateHD_Click(object sender, EventArgs e)
@@ -370,6 +403,8 @@ namespace bai6quanlysieuthi.Views
             this.Close();
         }
         #endregion
+        #endregion
+
         #endregion
 
     }

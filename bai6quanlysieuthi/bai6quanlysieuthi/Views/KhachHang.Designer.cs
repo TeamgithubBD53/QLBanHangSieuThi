@@ -113,19 +113,19 @@
             // menuTrangChu
             // 
             this.menuTrangChu.Name = "menuTrangChu";
-            this.menuTrangChu.Size = new System.Drawing.Size(108, 32);
+            this.menuTrangChu.Size = new System.Drawing.Size(110, 32);
             this.menuTrangChu.Text = "Trang chủ";
             // 
             // menuHangHoa
             // 
             this.menuHangHoa.Name = "menuHangHoa";
-            this.menuHangHoa.Size = new System.Drawing.Size(109, 32);
+            this.menuHangHoa.Size = new System.Drawing.Size(111, 32);
             this.menuHangHoa.Text = "Hàng hóa";
             // 
             // menuNhanVien
             // 
             this.menuNhanVien.Name = "menuNhanVien";
-            this.menuNhanVien.Size = new System.Drawing.Size(112, 32);
+            this.menuNhanVien.Size = new System.Drawing.Size(114, 32);
             this.menuNhanVien.Text = "Nhân viên";
             // 
             // tabControl1
@@ -217,7 +217,7 @@
             this.btnExitKH.TabIndex = 7;
             this.btnExitKH.Text = "Thoát";
             this.btnExitKH.UseVisualStyleBackColor = false;
-            this.btnExitKH.Click += new System.EventHandler(this.btnExitKH_Click);
+            this.btnExitKH.Click += new System.EventHandler(this.btnExitHD_Click);
             // 
             // btnDeleteKh
             // 
