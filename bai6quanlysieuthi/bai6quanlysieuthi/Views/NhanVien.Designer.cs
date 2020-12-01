@@ -704,6 +704,7 @@
             this.btnExit_CTPGC.TabIndex = 25;
             this.btnExit_CTPGC.Text = "Thoát";
             this.btnExit_CTPGC.UseVisualStyleBackColor = false;
+            this.btnExit_CTPGC.Click += new System.EventHandler(this.btnExit_CTPGC_Click);
             // 
             // panel5
             // 
@@ -749,6 +750,7 @@
             this.btnSearch_CTPGC.TabIndex = 1;
             this.btnSearch_CTPGC.Text = "Tìm kiếm";
             this.btnSearch_CTPGC.UseVisualStyleBackColor = false;
+            this.btnSearch_CTPGC.Click += new System.EventHandler(this.btnSearch_CTPGC_Click);
             // 
             // btnDelete_CTPGC
             // 
@@ -761,6 +763,7 @@
             this.btnDelete_CTPGC.TabIndex = 22;
             this.btnDelete_CTPGC.Text = "Xóa";
             this.btnDelete_CTPGC.UseVisualStyleBackColor = false;
+            this.btnDelete_CTPGC.Click += new System.EventHandler(this.btnDelete_CTPGC_Click);
             // 
             // btnUpdate_CTPGC
             // 
@@ -773,6 +776,7 @@
             this.btnUpdate_CTPGC.TabIndex = 21;
             this.btnUpdate_CTPGC.Text = "Sửa";
             this.btnUpdate_CTPGC.UseVisualStyleBackColor = false;
+            this.btnUpdate_CTPGC.Click += new System.EventHandler(this.btnUpdate_CTPGC_Click);
             // 
             // btnInsert_CTPGC
             // 
@@ -785,6 +789,7 @@
             this.btnInsert_CTPGC.TabIndex = 20;
             this.btnInsert_CTPGC.Text = "Thêm";
             this.btnInsert_CTPGC.UseVisualStyleBackColor = false;
+            this.btnInsert_CTPGC.Click += new System.EventHandler(this.btnInsert_CTPGC_Click);
             // 
             // btnView_CTPGC
             // 
@@ -797,16 +802,20 @@
             this.btnView_CTPGC.TabIndex = 19;
             this.btnView_CTPGC.Text = "Xem";
             this.btnView_CTPGC.UseVisualStyleBackColor = false;
+            this.btnView_CTPGC.Click += new System.EventHandler(this.btnView_CTPGC_Click);
             // 
             // dgvCtGiaoCa
             // 
+            this.dgvCtGiaoCa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCtGiaoCa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCtGiaoCa.Location = new System.Drawing.Point(69, 225);
             this.dgvCtGiaoCa.Margin = new System.Windows.Forms.Padding(4);
             this.dgvCtGiaoCa.Name = "dgvCtGiaoCa";
+            this.dgvCtGiaoCa.ReadOnly = true;
             this.dgvCtGiaoCa.RowHeadersWidth = 51;
             this.dgvCtGiaoCa.Size = new System.Drawing.Size(883, 298);
             this.dgvCtGiaoCa.TabIndex = 18;
+            this.dgvCtGiaoCa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCtGiaoCa_CellClick);
             // 
             // panel6
             // 

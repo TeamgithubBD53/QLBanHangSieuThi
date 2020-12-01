@@ -477,30 +477,191 @@ namespace bai6quanlysieuthi.Views
         {
             this.Close();
         }
+
         #endregion
 
-#endregion
+        #endregion
 
-        #region Chi tiết giao ca 
-        #region Show thông tin giao ca 
+#region Chi tiết giao ca 
+        #region Show thông tin giao ca
+        private void btnView_CTPGC_Click(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+            ViewCTGiaoCa();
+        }
+        void ViewCTGiaoCa()
+        {
+            dgvCtGiaoCa.DataSource = CTGiaoCaController.Instance.XemCtGiaoCa();
+            dgvCtGiaoCa.Columns["stt"].Width = 45;
+            dgvCtGiaoCa.Columns["magiaoca"].HeaderText = @"Mã giao ca";
+            dgvCtGiaoCa.Columns["magiaoca"].Width = 80;
+            dgvCtGiaoCa.Columns["mamathang"].HeaderText = @"Mã mặt hàng";
+            dgvCtGiaoCa.Columns["mamathang"].Width = 80;
+            dgvCtGiaoCa.Columns["soluong"].HeaderText = @"Số lượng";
+            dgvCtGiaoCa.Columns["soluong"].Width = 80;
+            //dgvCtGiaoCa.Columns["phieugiaca"].DividerWidth=0;
+        }
+        private void dgvCtGiaoCa_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtSTTCgc.Text = dgvCtGiaoCa.CurrentRow.Cells[0].Value.ToString();
+            txtMaGiaoCaCgc.Text = dgvCtGiaoCa.CurrentRow.Cells[1].Value.ToString();
+            txtMaMatHangCgc.Text = dgvCtGiaoCa.CurrentRow.Cells[2].Value.ToString();
+            txtSoLuongCgc.Text = dgvCtGiaoCa.CurrentRow.Cells[3].Value.ToString();
+        }
+
         #endregion
 
         #region Thêm giao ca
+        private void btnInsert_CTPGC_Click(object sender, EventArgs e)
+        {
+            if (txtMaGiaoCaCgc.Text == "" || txtMaMatHangCgc.Text == "" || txtSoLuongCgc.Text == "")
+            {
+                if (txtMaGiaoCaCgc.Text == "")
+                    errorProvider1.SetError(txtMaGiaoCaCgc, "Chưa nhập mã giao ca");
+                if (txtMaMatHangCgc.Text == "")
+                    errorProvider1.SetError(txtMaMatHangCgc, "Chưa nhập mã mặt hàng");
+                if (txtSoLuongCgc.Text == "")
+                    errorProvider1.SetError(txtSoLuongCgc, "Chưa nhập số lượng mặt hàng");
+                MessageBox.Show("Nhập thông tin đầy đủ");
+                return;
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+            try
+            {
+                string maquay = txtMaGiaoCaCgc.Text;
+                string mamathang = txtMaMatHangCgc.Text;
+                int sl = (int)Convert.ToInt32(txtSoLuongCgc.Text);
+                if (MessageBox.Show("Bạn có muốn thêm hay không", "Thêm", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    if (CTGiaoCaController.Instance.InsertCtGiaoCa(maquay, mamathang, sl))
+                    {
+                        MessageBox.Show("Thêm thành công!");
+                        ViewGiaoCa();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Không thành công");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi dữ liệu");
+                return;
+            }
+        }
+
         #endregion
 
         #region Sửa giao ca 
+        private void btnUpdate_CTPGC_Click(object sender, EventArgs e)
+        {
+            if (txtMaGiaoCaCgc.Text == "" || txtMaMatHangCgc.Text == "" || txtSoLuongCgc.Text == "")
+            {
+                if (txtMaGiaoCaCgc.Text == "")
+                    errorProvider1.SetError(txtMaGiaoCaCgc, "Chưa nhập mã giao ca");
+                if (txtMaMatHangCgc.Text == "")
+                    errorProvider1.SetError(txtMaMatHangCgc, "Chưa nhập mã mặt hàng");
+                if (txtSoLuongCgc.Text == "")
+                    errorProvider1.SetError(txtSoLuongCgc, "Chưa nhập số lượng mặt hàng");
+                MessageBox.Show("Nhập thông tin đầy đủ");
+                return;
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+            try
+            {
+                int stt = (int)Convert.ToInt32(txtSTTCgc.Text);
+                string maquay = txtMaGiaoCaCgc.Text;
+                string mamathang = txtMaMatHangCgc.Text;
+                int sl = (int)Convert.ToInt32(txtSoLuongCgc.Text);
+                if (MessageBox.Show("Bạn có muốn sửa hay không", "sửa", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    if (CTGiaoCaController.Instance.UpdateCtGiaoCa(stt, maquay, mamathang, sl))
+                    {
+                        MessageBox.Show("Sửa thành công!");
+                        ViewGiaoCa();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Không thành công");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi dữ liệu");
+                return;
+            }
+        }
+
         #endregion
 
         #region Xoá giao ca  
+        private void btnDelete_CTPGC_Click(object sender, EventArgs e)
+        {
+            if (txtSTTCgc.Text == "")
+            {
+                errorProvider1.SetError(txtSTTCgc, "Nhập stt cần xóa");
+                MessageBox.Show("Nhập vào số thứ tự cần xóa");
+                return;
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+            int stt = 0;
+            stt = (int)Convert.ToInt32(txtSTTCgc.Text);
+            if (MessageBox.Show("Bạn có muốn thêm hay không", "Thêm", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                if (CTGiaoCaController.Instance.DeleteCtGiaoCa(stt))
+                {
+                    MessageBox.Show("Thêm thành công!");
+                    ViewGiaoCa();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Không thành công");
+            }
+        }
+
         #endregion
 
         #region Tìm kiếm 
+        private void btnSearch_CTPGC_Click(object sender, EventArgs e)
+        {
+            if (txtMaGiaoCaCgc.Text == "" && txtMaMatHangCgc.Text == "")
+            {
+                if (txtMaGiaoCaCgc.Text == "")
+                    errorProvider1.SetError(txtMaGiaoCaCgc, "Nhập mã giao ca cần tìm");
+                if (txtMaMatHangCgc.Text == "")
+                    errorProvider1.SetError(txtMaMatHangCgc, "Nhập mã mặt hàng cần tìm");
+                MessageBox.Show("Nhập thông tin cần tìm");
+                return;
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+            dgvCtGiaoCa.DataSource = CTGiaoCaController.Instance.SearchCtGiaoCa(txtMaGiaoCaCgc.Text, txtMaMatHangCgc.Text);
+        }
+
         #endregion
 
         #region Thoát 
+        private void btnExit_CTPGC_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         #endregion
 
-        #endregion
+#endregion
 
 
     }
