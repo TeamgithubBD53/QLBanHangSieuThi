@@ -55,6 +55,30 @@ namespace bai6quanlysieuthi.Controller
             string query = string.Format("delete nhanvien where ma=N'{0}'", ma);
             return DataProvider.Instance.ExecuteNonQuery(query) > 0;
         }
-       
+        public List<nhanvien> SearchNhanVien(string ma)
+        {
+            List<nhanvien> list = new List<nhanvien>();
+            string query = string.Format("select * from nhanvien where nhanvien.ma like N'%{0}%'", ma);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow i in data.Rows)
+            {
+                nhanvien nv = new nhanvien(i);
+                list.Add(nv);
+            }
+            return list;
+        }
+
+        public List<nhanvien> SearchNhanVien1(string sdt)
+        {
+            List<nhanvien> list = new List<nhanvien>();
+            string query = string.Format("select * from nhanvien where nhanvien.sodienthoai like N'%{0}%'", sdt);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow i in data.Rows)
+            {
+                nhanvien nv = new nhanvien(i);
+                list.Add(nv);
+            }
+            return list;
+        }
     }
 }

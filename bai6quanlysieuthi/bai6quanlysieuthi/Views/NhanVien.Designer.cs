@@ -193,6 +193,7 @@
             this.btnSearch_NV.TabIndex = 1;
             this.btnSearch_NV.Text = "Tìm kiếm";
             this.btnSearch_NV.UseVisualStyleBackColor = false;
+            this.btnSearch_NV.Click += new System.EventHandler(this.btnSearch_NV_Click);
             // 
             // btnExit_NV
             // 
@@ -205,6 +206,7 @@
             this.btnExit_NV.TabIndex = 15;
             this.btnExit_NV.Text = "Thoát";
             this.btnExit_NV.UseVisualStyleBackColor = false;
+            this.btnExit_NV.Click += new System.EventHandler(this.btnExit_NV_Click);
             // 
             // btnDelete_NV
             // 
@@ -264,6 +266,7 @@
             this.dgvNhanVien.Location = new System.Drawing.Point(57, 271);
             this.dgvNhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.dgvNhanVien.Name = "dgvNhanVien";
+            this.dgvNhanVien.ReadOnly = true;
             this.dgvNhanVien.RowHeadersWidth = 51;
             this.dgvNhanVien.Size = new System.Drawing.Size(935, 270);
             this.dgvNhanVien.TabIndex = 9;
@@ -476,6 +479,7 @@
             this.btnExit_PGC.TabIndex = 15;
             this.btnExit_PGC.Text = "Thoát";
             this.btnExit_PGC.UseVisualStyleBackColor = false;
+            this.btnExit_PGC.Click += new System.EventHandler(this.btnExit_PGC_Click);
             // 
             // btnDelete_PGC
             // 
@@ -488,6 +492,7 @@
             this.btnDelete_PGC.TabIndex = 13;
             this.btnDelete_PGC.Text = "Xóa";
             this.btnDelete_PGC.UseVisualStyleBackColor = false;
+            this.btnDelete_PGC.Click += new System.EventHandler(this.btnDelete_PGC_Click);
             // 
             // btnUpdate_PGC
             // 
@@ -500,6 +505,7 @@
             this.btnUpdate_PGC.TabIndex = 12;
             this.btnUpdate_PGC.Text = "Sửa";
             this.btnUpdate_PGC.UseVisualStyleBackColor = false;
+            this.btnUpdate_PGC.Click += new System.EventHandler(this.btnUpdate_PGC_Click);
             // 
             // btnInsert_PGC
             // 
@@ -512,6 +518,7 @@
             this.btnInsert_PGC.TabIndex = 11;
             this.btnInsert_PGC.Text = "Thêm";
             this.btnInsert_PGC.UseVisualStyleBackColor = false;
+            this.btnInsert_PGC.Click += new System.EventHandler(this.btnInsert_PGC_Click);
             // 
             // btnView_PGC
             // 
@@ -524,9 +531,11 @@
             this.btnView_PGC.TabIndex = 10;
             this.btnView_PGC.Text = "Xem";
             this.btnView_PGC.UseVisualStyleBackColor = false;
+            this.btnView_PGC.Click += new System.EventHandler(this.btnView_PGC_Click);
             // 
             // dgvPhieuGC
             // 
+            this.dgvPhieuGC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPhieuGC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPhieuGC.Location = new System.Drawing.Point(68, 175);
             this.dgvPhieuGC.Margin = new System.Windows.Forms.Padding(4);
@@ -534,6 +543,7 @@
             this.dgvPhieuGC.RowHeadersWidth = 51;
             this.dgvPhieuGC.Size = new System.Drawing.Size(835, 346);
             this.dgvPhieuGC.TabIndex = 9;
+            this.dgvPhieuGC.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuGC_CellClick);
             // 
             // panel1
             // 
@@ -573,6 +583,7 @@
             this.btnSearch_PGC.TabIndex = 1;
             this.btnSearch_PGC.Text = "Tìm kiếm";
             this.btnSearch_PGC.UseVisualStyleBackColor = false;
+            this.btnSearch_PGC.Click += new System.EventHandler(this.btnSearch_PGC_Click);
             // 
             // cbCaGc
             // 
@@ -938,6 +949,7 @@
             this.Controls.Add(this.mnsNhanVien);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "NhanVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nhân viên";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
