@@ -483,3 +483,12 @@ begin
 	taikhoan=@username and matkhau=@password
 end 
 GO
+create trigger xoagiaoca on phieugiaoca instead of delete
+as
+begin
+  declare @ma nvarchar(20)
+  select @ma = ma
+  from deleted
+  delete chitietphieugiaoca where magiaoca = @ma
+  
+end
