@@ -5,7 +5,7 @@ namespace bai6quanlysieuthi.Models
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data;
-    using System.Data.Entity.Spatial;
+
 
     [Table("chitietphieugiaoca")]
     public partial class chitietphieugiaoca
@@ -35,6 +35,7 @@ namespace bai6quanlysieuthi.Models
             this.magiaoca = row["magiaoca"].ToString();
             this.mamathang = row["mamathang"].ToString();
             this.soluong = (int)Convert.ToInt32(row["soluong"].ToString());
+
         }
 
     }
