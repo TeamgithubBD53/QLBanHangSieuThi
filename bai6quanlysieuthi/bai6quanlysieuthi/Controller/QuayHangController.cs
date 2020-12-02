@@ -48,5 +48,25 @@ namespace bai6quanlysieuthi.Controller
             string query = string.Format("update quayhang  set ten=N'{0}',vitri=N'{1}' where ma=N'2'", ten, vitri, ma);
             return DataProvider.Instance.ExecuteNonQuery(query) > 0;
         }
+        // xóa quầy hàng
+        public bool DeleteQuayHang(string ma)
+        {
+            string query = string.Format("delete quayhang where ma=N'{0}'", ma);
+            return DataProvider.Instance.ExecuteNonQuery(query) > 0;
+        }
+        // tìm kiếm quầy hàng
+        public List<quayhang> SearchQuayHang(string ma, string ten)
+        {
+            List<quayhang> list = new List<quayhang>();
+            string query = string.Format("select * from quayhang a where a.ma like N'%{0}%' and a.ten like N'%{1}%'", ma, ten);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow i in data.Rows)
+            {
+                quayhang mh = new quayhang(i);
+                list.Add(mh);
+            }
+            return list;
+
+        }
     }
 }
