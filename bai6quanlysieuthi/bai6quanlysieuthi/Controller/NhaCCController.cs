@@ -56,5 +56,19 @@ namespace bai6quanlysieuthi.Controller
             string query = string.Format("delete nhacungcap where ma=N'{0}'", ma);
             return DataProvider.Instance.ExecuteNonQuery(query) > 0;
         }
+
+        // tìm kiếm nhà cung cấp
+        public List<nhacungcap> SearchNhaCC(string ma, string ten)
+        {
+            List<nhacungcap> list = new List<nhacungcap>();
+            string query = string.Format("select * from nhacungcap mh where mh.ma like N'%{0}%' and mh.ten like N'%{1}%' ", ma, ten);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow i in data.Rows)
+            {
+                nhacungcap mh = new nhacungcap(i);
+                list.Add(mh);
+            }
+            return list;
+        }
     }
 }
