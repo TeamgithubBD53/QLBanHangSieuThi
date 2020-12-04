@@ -37,5 +37,18 @@ namespace bai6quanlysieuthi.Controller
             }
             return list;
         }
+
+        // thêm mặt hàng
+        public bool InsertMatHang(string ma, string ten, string loaimh, string donvitinh, string maquay, string mancc, float gia)
+        {
+            string query = string.Format("insert mathang(ma,ten,loaimathang,donvitinh,maquay,manhacc,gia) values(N'{0}',N'{1}',N'{2}',N'{3}',N'{4}',N'{5}',{6})", ma, ten, loaimh, donvitinh, maquay, mancc, gia);
+            return DataProvider.Instance.ExecuteNonQuery(query) > 0;
+        }
+        // sửa mặt hàng
+        public bool UpdateMatHang(string ma, string ten, string loaimh, string donvitinh, string maquay, string mancc, float gia)
+        {
+            string query = string.Format("update mathang set ten=N'{0}',loaimathang=N'{1}',donvitinh=N'{2}',maquay=N'{3}',manhacc=N'{4}',gia={5} where ma=N'{5}'", ten, loaimh, donvitinh, maquay, mancc, gia, ma);
+            return DataProvider.Instance.ExecuteNonQuery(query) > 0;
+        }
     }
 }
