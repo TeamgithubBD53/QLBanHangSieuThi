@@ -18,7 +18,34 @@ namespace bai6quanlysieuthi.Views
             InitializeComponent();
         }
 
+        #region menustrip
 
+        private void menuKhachHang_Click(object sender, EventArgs e)
+        {
+            KhachHang f = new KhachHang();
+            this.Hide();
+            f.ShowDialog();
+            this.Close();
+        }
+
+        private void menuTrangChu_Click(object sender, EventArgs e)
+        {
+            TrangChu f = new TrangChu();
+            this.Hide();
+            f.ShowDialog();
+            this.Close();
+        }
+
+        private void menuNhanVien_Click(object sender, EventArgs e)
+        {
+            NhanVien f = new NhanVien();
+            this.Hide();
+            f.ShowDialog();
+            this.Close();
+        }
+
+
+        #endregion
 
 
 
