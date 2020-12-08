@@ -49,7 +49,7 @@ namespace bai6quanlysieuthi.Controller
         // sửa  khách hàng
         public bool UpdateKhachHang(string ma, string ten, string diachi, string sodt, float uudai)
         {
-            string query = string.Format("update khachhang set ten=N'{0}',diachi='{1}',sodienthoai=N'{2}',uudai={3} where ma=N'{4}'", ten, diachi, sodt, uudai, ma);
+            string query = string.Format("update khachhang set ten=N'{0}',diachi=N'{1}',sodienthoai=N'{2}',uudai={3} where ma=N'{4}'", ten, diachi, sodt, uudai, ma);
             return DataProvider.Instance.ExecuteNonQuery(query) > 0;
         }
         //xóa khách hàng
