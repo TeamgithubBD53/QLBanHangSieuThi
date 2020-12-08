@@ -559,7 +559,6 @@
             this.btnExit_XK.TabIndex = 28;
             this.btnExit_XK.Text = "Thoát";
             this.btnExit_XK.UseVisualStyleBackColor = false;
-            this.btnExit_XK.Click += new System.EventHandler(this.btnExit_XK_Click);
             // 
             // btnDelete_XK
             // 
@@ -572,7 +571,6 @@
             this.btnDelete_XK.TabIndex = 26;
             this.btnDelete_XK.Text = "Xóa";
             this.btnDelete_XK.UseVisualStyleBackColor = false;
-            this.btnDelete_XK.Click += new System.EventHandler(this.btnDelete_XK_Click);
             // 
             // btnUpdate_XK
             // 
@@ -585,7 +583,6 @@
             this.btnUpdate_XK.TabIndex = 25;
             this.btnUpdate_XK.Text = "Sửa";
             this.btnUpdate_XK.UseVisualStyleBackColor = false;
-            this.btnUpdate_XK.Click += new System.EventHandler(this.btnUpdate_XK_Click);
             // 
             // btnInsert_XK
             // 
@@ -598,7 +595,6 @@
             this.btnInsert_XK.TabIndex = 24;
             this.btnInsert_XK.Text = "Thêm";
             this.btnInsert_XK.UseVisualStyleBackColor = false;
-            this.btnInsert_XK.Click += new System.EventHandler(this.btnInsert_XK_Click);
             // 
             // btnView_XK
             // 
@@ -611,7 +607,6 @@
             this.btnView_XK.TabIndex = 23;
             this.btnView_XK.Text = "Xem";
             this.btnView_XK.UseVisualStyleBackColor = false;
-            this.btnView_XK.Click += new System.EventHandler(this.btnView_XK_Click);
             // 
             // panel9
             // 
@@ -646,7 +641,6 @@
             this.btnSearch_XK.TabIndex = 19;
             this.btnSearch_XK.Text = "Tìm kiếm";
             this.btnSearch_XK.UseVisualStyleBackColor = false;
-            this.btnSearch_XK.Click += new System.EventHandler(this.btnSearch_XK_Click);
             // 
             // dtpNgayLapXk
             // 
@@ -666,7 +660,6 @@
             this.btnDetail_XK.TabIndex = 20;
             this.btnDetail_XK.Text = "Chi tiết";
             this.btnDetail_XK.UseVisualStyleBackColor = false;
-            this.btnDetail_XK.Click += new System.EventHandler(this.btnDetail_XK_Click);
             // 
             // cbMaQuayXK
             // 
