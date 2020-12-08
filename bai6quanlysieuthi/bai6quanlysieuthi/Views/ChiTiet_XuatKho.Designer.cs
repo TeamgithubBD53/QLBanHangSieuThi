@@ -68,7 +68,7 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(85, 15);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1007, 167);
             this.panel2.TabIndex = 40;
@@ -78,19 +78,20 @@
             this.btnSearch_CTXK.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnSearch_CTXK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch_CTXK.Location = new System.Drawing.Point(780, 101);
-            this.btnSearch_CTXK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearch_CTXK.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch_CTXK.Name = "btnSearch_CTXK";
             this.btnSearch_CTXK.Size = new System.Drawing.Size(140, 43);
             this.btnSearch_CTXK.TabIndex = 11;
             this.btnSearch_CTXK.Text = "Tìm kiếm";
             this.btnSearch_CTXK.UseVisualStyleBackColor = false;
+            this.btnSearch_CTXK.Click += new System.EventHandler(this.btnSearch_CTXK_Click);
             // 
             // cbMaMatHang
             // 
             this.cbMaMatHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMaMatHang.FormattingEnabled = true;
             this.cbMaMatHang.Location = new System.Drawing.Point(240, 107);
-            this.cbMaMatHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbMaMatHang.Margin = new System.Windows.Forms.Padding(4);
             this.cbMaMatHang.Name = "cbMaMatHang";
             this.cbMaMatHang.Size = new System.Drawing.Size(133, 33);
             this.cbMaMatHang.TabIndex = 9;
@@ -100,7 +101,7 @@
             this.cbMaXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMaXuat.FormattingEnabled = true;
             this.cbMaXuat.Location = new System.Drawing.Point(240, 59);
-            this.cbMaXuat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbMaXuat.Margin = new System.Windows.Forms.Padding(4);
             this.cbMaXuat.Name = "cbMaXuat";
             this.cbMaXuat.Size = new System.Drawing.Size(133, 33);
             this.cbMaXuat.TabIndex = 8;
@@ -109,7 +110,7 @@
             // 
             this.txtDonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDonGia.Location = new System.Drawing.Point(701, 62);
-            this.txtDonGia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDonGia.Margin = new System.Windows.Forms.Padding(4);
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.Size = new System.Drawing.Size(217, 30);
             this.txtDonGia.TabIndex = 7;
@@ -118,7 +119,7 @@
             // 
             this.txtSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoLuong.Location = new System.Drawing.Point(701, 16);
-            this.txtSoLuong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSoLuong.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(217, 30);
             this.txtSoLuong.TabIndex = 6;
@@ -127,7 +128,7 @@
             // 
             this.txtSTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSTT.Location = new System.Drawing.Point(240, 20);
-            this.txtSTT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSTT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSTT.Name = "txtSTT";
             this.txtSTT.Size = new System.Drawing.Size(133, 30);
             this.txtSTT.TabIndex = 5;
@@ -186,18 +187,19 @@
             // 
             this.dgvCtXuatKho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCtXuatKho.Location = new System.Drawing.Point(85, 201);
-            this.dgvCtXuatKho.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvCtXuatKho.Margin = new System.Windows.Forms.Padding(4);
             this.dgvCtXuatKho.Name = "dgvCtXuatKho";
             this.dgvCtXuatKho.RowHeadersWidth = 51;
             this.dgvCtXuatKho.Size = new System.Drawing.Size(795, 332);
             this.dgvCtXuatKho.TabIndex = 38;
+            this.dgvCtXuatKho.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCtXuatKho_CellClick);
             // 
             // btnExit_CTXK
             // 
             this.btnExit_CTXK.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnExit_CTXK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit_CTXK.Location = new System.Drawing.Point(980, 485);
-            this.btnExit_CTXK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExit_CTXK.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit_CTXK.Name = "btnExit_CTXK";
             this.btnExit_CTXK.Size = new System.Drawing.Size(113, 49);
             this.btnExit_CTXK.TabIndex = 37;
@@ -209,48 +211,52 @@
             this.btnDelete_CTXK.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnDelete_CTXK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete_CTXK.Location = new System.Drawing.Point(980, 412);
-            this.btnDelete_CTXK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete_CTXK.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete_CTXK.Name = "btnDelete_CTXK";
             this.btnDelete_CTXK.Size = new System.Drawing.Size(113, 49);
             this.btnDelete_CTXK.TabIndex = 35;
             this.btnDelete_CTXK.Text = "Xóa";
             this.btnDelete_CTXK.UseVisualStyleBackColor = false;
+            this.btnDelete_CTXK.Click += new System.EventHandler(this.btnDelete_CTXK_Click);
             // 
             // btnUpdate_CTXK
             // 
             this.btnUpdate_CTXK.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnUpdate_CTXK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate_CTXK.Location = new System.Drawing.Point(980, 341);
-            this.btnUpdate_CTXK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdate_CTXK.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate_CTXK.Name = "btnUpdate_CTXK";
             this.btnUpdate_CTXK.Size = new System.Drawing.Size(113, 49);
             this.btnUpdate_CTXK.TabIndex = 34;
             this.btnUpdate_CTXK.Text = "Sửa";
             this.btnUpdate_CTXK.UseVisualStyleBackColor = false;
+            this.btnUpdate_CTXK.Click += new System.EventHandler(this.btnUpdate_CTXK_Click);
             // 
             // btnInsert_CTXK
             // 
             this.btnInsert_CTXK.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnInsert_CTXK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsert_CTXK.Location = new System.Drawing.Point(980, 201);
-            this.btnInsert_CTXK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnInsert_CTXK.Margin = new System.Windows.Forms.Padding(4);
             this.btnInsert_CTXK.Name = "btnInsert_CTXK";
             this.btnInsert_CTXK.Size = new System.Drawing.Size(113, 49);
             this.btnInsert_CTXK.TabIndex = 33;
             this.btnInsert_CTXK.Text = "Thêm";
             this.btnInsert_CTXK.UseVisualStyleBackColor = false;
+            this.btnInsert_CTXK.Click += new System.EventHandler(this.btnInsert_CTXK_Click);
             // 
             // btnView_CTXK
             // 
             this.btnView_CTXK.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnView_CTXK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnView_CTXK.Location = new System.Drawing.Point(980, 271);
-            this.btnView_CTXK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnView_CTXK.Margin = new System.Windows.Forms.Padding(4);
             this.btnView_CTXK.Name = "btnView_CTXK";
             this.btnView_CTXK.Size = new System.Drawing.Size(113, 49);
             this.btnView_CTXK.TabIndex = 32;
             this.btnView_CTXK.Text = "Xem";
             this.btnView_CTXK.UseVisualStyleBackColor = false;
+            this.btnView_CTXK.Click += new System.EventHandler(this.btnView_CTXK_Click);
             // 
             // errorProvider1
             // 
@@ -269,7 +275,7 @@
             this.Controls.Add(this.btnUpdate_CTXK);
             this.Controls.Add(this.btnInsert_CTXK);
             this.Controls.Add(this.btnView_CTXK);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ChiTiet_XuatKho";
             this.Text = "Chi tiết phiếu xuất";
             this.panel2.ResumeLayout(false);
