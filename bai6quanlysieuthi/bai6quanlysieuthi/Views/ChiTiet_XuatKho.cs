@@ -89,15 +89,16 @@ namespace bai6quanlysieuthi.Views
         void ViewCtXuatKho()
         {
             dgvCtXuatKho.DataSource = CtXuatKhoController.Instance.XemCtXuatKho();
-            dgvCtXuatKho.Columns["stt"].Width = 45;
+            dgvCtXuatKho.Columns["stt"].HeaderText = @"STT";
+            dgvCtXuatKho.Columns["stt"].Width = 140;
             dgvCtXuatKho.Columns["maxuat"].HeaderText = @"Mã xuất";
-            dgvCtXuatKho.Columns["maxuat"].Width = 80;
+            dgvCtXuatKho.Columns["maxuat"].Width = 150;
             dgvCtXuatKho.Columns["mamathang"].HeaderText = @"Mã mặt hàng";
-            dgvCtXuatKho.Columns["mamathang"].Width = 80;
+            dgvCtXuatKho.Columns["mamathang"].Width = 150;
             dgvCtXuatKho.Columns["soluong"].HeaderText = @"Số lượng";
-            dgvCtXuatKho.Columns["soluong"].Width = 80;
-            dgvCtXuatKho.Columns["dongia"].HeaderText = @"Đơng giá";
-            dgvCtXuatKho.Columns["dongia"].Width = 80;
+            dgvCtXuatKho.Columns["soluong"].Width = 150;
+            dgvCtXuatKho.Columns["dongia"].HeaderText = @"Đơn giá";
+            dgvCtXuatKho.Columns["dongia"].Width = 150;
         }
         #endregion
         #region sửa chi tiết phiết xuất
