@@ -1,17 +1,8 @@
 namespace bai6quanlysieuthi.Models
 {
-<<<<<<< HEAD
-    using System;
-    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data;
-    using System.Data.Entity.Spatial;
-=======
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data;
->>>>>>> 8bedb5f4728463a9fa975e513081259749ff4271
 
     [Table("nhacungcap")]
     public partial class nhacungcap

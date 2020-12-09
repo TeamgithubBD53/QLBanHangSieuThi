@@ -5,11 +5,6 @@ namespace bai6quanlysieuthi.Models
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data;
-<<<<<<< HEAD
-    using System.Data.Entity.Spatial;
-=======
-
->>>>>>> 8bedb5f4728463a9fa975e513081259749ff4271
 
     [Table("chitietphieugiaoca")]
     public partial class chitietphieugiaoca
@@ -39,10 +34,6 @@ namespace bai6quanlysieuthi.Models
             this.magiaoca = row["magiaoca"].ToString();
             this.mamathang = row["mamathang"].ToString();
             this.soluong = (int)Convert.ToInt32(row["soluong"].ToString());
-<<<<<<< HEAD
-=======
-
->>>>>>> 8bedb5f4728463a9fa975e513081259749ff4271
         }
 
     }
