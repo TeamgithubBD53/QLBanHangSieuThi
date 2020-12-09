@@ -50,5 +50,25 @@ namespace bai6quanlysieuthi.Controller
             string query = string.Format("update mathang set ten=N'{0}',loaimathang=N'{1}',donvitinh=N'{2}',maquay=N'{3}',manhacc=N'{4}',gia={5} where ma=N'{5}'", ten, loaimh, donvitinh, maquay, mancc, gia, ma);
             return DataProvider.Instance.ExecuteNonQuery(query) > 0;
         }
+
+        // xoas mặt hàng
+        public bool DeleteMatHang(string ma)
+        {
+            string query = string.Format("delete mathang where ma=N'{0}'", ma);
+            return DataProvider.Instance.ExecuteNonQuery(query) > 0;
+        }
+        // tìm mặt hàng
+        public List<mathang> SearchMatHang(string ma, string ten, string loaimathang, string maquay, string mancc)
+        {
+            List<mathang> list = new List<mathang>();
+            string query = string.Format("select * from mathang mh where mh.ma like N'%{0}%' and mh.ten like N'%{1}%' and mh.loaimathang like N'%{2}%' and mh.maquay like N'%{3}%' and mh.manhacc like N'%{4}%'", ma, ten, loaimathang, maquay, mancc);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow i in data.Rows)
+            {
+                mathang mh = new mathang(i);
+                list.Add(mh);
+            }
+            return list;
+        }
     }
 }
