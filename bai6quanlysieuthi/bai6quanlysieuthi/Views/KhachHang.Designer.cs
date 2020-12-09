@@ -115,18 +115,21 @@
             this.menuTrangChu.Name = "menuTrangChu";
             this.menuTrangChu.Size = new System.Drawing.Size(110, 32);
             this.menuTrangChu.Text = "Trang chủ";
+            this.menuTrangChu.Click += new System.EventHandler(this.menuTrangChu_Click);
             // 
             // menuHangHoa
             // 
             this.menuHangHoa.Name = "menuHangHoa";
             this.menuHangHoa.Size = new System.Drawing.Size(111, 32);
             this.menuHangHoa.Text = "Hàng hóa";
+            this.menuHangHoa.Click += new System.EventHandler(this.menuHangHoa_Click);
             // 
             // menuNhanVien
             // 
             this.menuNhanVien.Name = "menuNhanVien";
             this.menuNhanVien.Size = new System.Drawing.Size(114, 32);
             this.menuNhanVien.Text = "Nhân viên";
+            this.menuNhanVien.Click += new System.EventHandler(this.menuNhanVien_Click);
             // 
             // tabControl1
             // 
