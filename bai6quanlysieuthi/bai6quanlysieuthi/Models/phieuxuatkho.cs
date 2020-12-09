@@ -5,7 +5,11 @@ namespace bai6quanlysieuthi.Models
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data;
+<<<<<<< HEAD
     using System.Data.Entity.Spatial;
+=======
+
+>>>>>>> 8bedb5f4728463a9fa975e513081259749ff4271
 
     [Table("phieuxuatkho")]
     public partial class phieuxuatkho

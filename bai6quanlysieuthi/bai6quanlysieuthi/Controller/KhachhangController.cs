@@ -31,7 +31,7 @@ namespace bai6quanlysieuthi.Controller
             List<khachhang> list = new List<khachhang>();
             string query = "select ma,ten,diachi,sodienthoai,uudai from khachhang";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
-            foreach(DataRow item in data.Rows)
+            foreach (DataRow item in data.Rows)
             {
                 khachhang kh = new khachhang(item);
                 list.Add(kh);
@@ -39,7 +39,7 @@ namespace bai6quanlysieuthi.Controller
             return list;
         }
         // them khach hang
-        public bool InsertKhachHang(string ma,string ten,string diachi, string sodt, float uudai)
+        public bool InsertKhachHang(string ma, string ten, string diachi, string sodt, float uudai)
         {
             string query = string.Format("insert khachhang(ma,ten,diachi,sodienthoai,uudai) values(N'{0}',N'{1}',N'{2}',N'{3}',{4})", ma, ten, diachi, sodt, uudai);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
@@ -49,7 +49,7 @@ namespace bai6quanlysieuthi.Controller
         // sửa  khách hàng
         public bool UpdateKhachHang(string ma, string ten, string diachi, string sodt, float uudai)
         {
-            string query = string.Format("update khachhang set ten=N'{0}',diachi='{1}',sodienthoai=N'{2}',uudai={3} where ma=N'{4}'", ten, diachi, sodt, uudai, ma);
+            string query = string.Format("update khachhang set ten=N'{0}',diachi=N'{1}',sodienthoai=N'{2}',uudai={3} where ma=N'{4}'", ten, diachi, sodt, uudai, ma);
             return DataProvider.Instance.ExecuteNonQuery(query) > 0;
         }
         //xóa khách hàng

@@ -42,11 +42,7 @@ namespace bai6quanlysieuthi.Views
             this.Close();
         }
 
-        private void btnHuongDan_Click(object sender, EventArgs e)
-        {
-            HuongDan f = new HuongDan();
-            f.ShowDialog();
-        }
+       
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
@@ -88,11 +84,7 @@ namespace bai6quanlysieuthi.Views
             this.Close();
         }
 
-        private void menuHuongDan_Click(object sender, EventArgs e)
-        {
-            HuongDan f = new HuongDan();
-            f.ShowDialog();
-        }
+        
         #endregion
     }
 }

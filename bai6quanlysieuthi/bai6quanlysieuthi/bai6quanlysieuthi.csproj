@@ -115,12 +115,6 @@
     <Compile Include="Models\sysdiagram.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\HuongDan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\HuongDan.Designer.cs">
-      <DependentUpon>HuongDan.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\KhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,12 +150,10 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Views\HangHoa.resx">
       <DependentUpon>HangHoa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\HuongDan.resx">
-      <DependentUpon>HuongDan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\KhachHang.resx">
       <DependentUpon>KhachHang.cs</DependentUpon>
@@ -187,6 +179,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="AnhNen.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
