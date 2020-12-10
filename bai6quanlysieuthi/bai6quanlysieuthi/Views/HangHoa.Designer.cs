@@ -1132,6 +1132,7 @@
             this.btnSearch_NSX.TabIndex = 11;
             this.btnSearch_NSX.Text = "Tìm kiếm";
             this.btnSearch_NSX.UseVisualStyleBackColor = false;
+            this.btnSearch_NSX.Click += new System.EventHandler(this.btnSearch_NSX_Click);
             // 
             // txtDienThoaiNCC
             // 
@@ -1234,6 +1235,7 @@
             this.btnExit_NSX.TabIndex = 19;
             this.btnExit_NSX.Text = "Thoát";
             this.btnExit_NSX.UseVisualStyleBackColor = false;
+            this.btnExit_NSX.Click += new System.EventHandler(this.btnExit_NSX_Click);
             // 
             // btnDelete_NSX
             // 
@@ -1246,6 +1248,7 @@
             this.btnDelete_NSX.TabIndex = 17;
             this.btnDelete_NSX.Text = "Xóa";
             this.btnDelete_NSX.UseVisualStyleBackColor = false;
+            this.btnDelete_NSX.Click += new System.EventHandler(this.btnDelete_NSX_Click);
             // 
             // btnUpdate_NSX
             // 
@@ -1258,6 +1261,7 @@
             this.btnUpdate_NSX.TabIndex = 16;
             this.btnUpdate_NSX.Text = "Sửa";
             this.btnUpdate_NSX.UseVisualStyleBackColor = false;
+            this.btnUpdate_NSX.Click += new System.EventHandler(this.btnUpdate_NSX_Click);
             // 
             // btnInsert_NSX
             // 
@@ -1270,6 +1274,7 @@
             this.btnInsert_NSX.TabIndex = 15;
             this.btnInsert_NSX.Text = "Thêm";
             this.btnInsert_NSX.UseVisualStyleBackColor = false;
+            this.btnInsert_NSX.Click += new System.EventHandler(this.btnInsert_NSX_Click);
             // 
             // btnView_NSX
             // 
@@ -1282,6 +1287,7 @@
             this.btnView_NSX.TabIndex = 14;
             this.btnView_NSX.Text = "Xem";
             this.btnView_NSX.UseVisualStyleBackColor = false;
+            this.btnView_NSX.Click += new System.EventHandler(this.btnView_NSX_Click);
             // 
             // dgvNSX
             // 
@@ -1292,6 +1298,7 @@
             this.dgvNSX.RowHeadersWidth = 51;
             this.dgvNSX.Size = new System.Drawing.Size(947, 305);
             this.dgvNSX.TabIndex = 1;
+            this.dgvNSX.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNSX_CellClick);
             // 
             // label6
             // 
