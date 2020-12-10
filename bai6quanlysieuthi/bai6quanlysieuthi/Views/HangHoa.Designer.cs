@@ -820,6 +820,7 @@
             this.btnExit_MH.TabIndex = 13;
             this.btnExit_MH.Text = "Thoát";
             this.btnExit_MH.UseVisualStyleBackColor = false;
+            this.btnExit_MH.Click += new System.EventHandler(this.btnExit_MH_Click);
             // 
             // btnDelete_MH
             // 
@@ -832,6 +833,7 @@
             this.btnDelete_MH.TabIndex = 11;
             this.btnDelete_MH.Text = "Xóa";
             this.btnDelete_MH.UseVisualStyleBackColor = false;
+            this.btnDelete_MH.Click += new System.EventHandler(this.btnDelete_MH_Click);
             // 
             // btnUpdate_MH
             // 
@@ -844,6 +846,7 @@
             this.btnUpdate_MH.TabIndex = 10;
             this.btnUpdate_MH.Text = "Sửa";
             this.btnUpdate_MH.UseVisualStyleBackColor = false;
+            this.btnUpdate_MH.Click += new System.EventHandler(this.btnUpdate_MH_Click);
             // 
             // btnInsert_MH
             // 
@@ -856,6 +859,7 @@
             this.btnInsert_MH.TabIndex = 9;
             this.btnInsert_MH.Text = "Thêm";
             this.btnInsert_MH.UseVisualStyleBackColor = false;
+            this.btnInsert_MH.Click += new System.EventHandler(this.btnInsert_MH_Click);
             // 
             // btnView_MH
             // 
@@ -868,6 +872,7 @@
             this.btnView_MH.TabIndex = 8;
             this.btnView_MH.Text = "Xem";
             this.btnView_MH.UseVisualStyleBackColor = false;
+            this.btnView_MH.Click += new System.EventHandler(this.btnView_MH_Click);
             // 
             // dgvMatHang
             // 
@@ -878,6 +883,7 @@
             this.dgvMatHang.RowHeadersWidth = 51;
             this.dgvMatHang.Size = new System.Drawing.Size(891, 300);
             this.dgvMatHang.TabIndex = 1;
+            this.dgvMatHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMatHang_CellClick);
             // 
             // panel1
             // 
@@ -913,6 +919,7 @@
             this.btnSearch_MH.TabIndex = 12;
             this.btnSearch_MH.Text = "Tìm kiếm";
             this.btnSearch_MH.UseVisualStyleBackColor = false;
+            this.btnSearch_MH.Click += new System.EventHandler(this.btnSearch_MH_Click);
             // 
             // txtGiaMh
             // 
