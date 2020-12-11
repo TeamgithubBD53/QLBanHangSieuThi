@@ -79,7 +79,7 @@ namespace bai6quanlysieuthi.Views
             txtMaNhanVien.Text = dgvHoaDon.CurrentRow.Cells[4].Value.ToString();
             txtTongGiaTri.Text = dgvHoaDon.CurrentRow.Cells[2].Value.ToString();
             txtThanhTien.Text = dgvHoaDon.CurrentRow.Cells[3].Value.ToString();
-            txtMaKhachHang.Text = dgvHoaDon.CurrentRow.Cells[4].Value.ToString();
+            txtMaKhachHang.Text = dgvHoaDon.CurrentRow.Cells[5].Value.ToString();
         }
         #endregion
         #region Thêm hóa đơn
