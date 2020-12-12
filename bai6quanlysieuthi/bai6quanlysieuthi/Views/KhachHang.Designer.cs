@@ -113,20 +113,23 @@
             // menuTrangChu
             // 
             this.menuTrangChu.Name = "menuTrangChu";
-            this.menuTrangChu.Size = new System.Drawing.Size(108, 32);
+            this.menuTrangChu.Size = new System.Drawing.Size(110, 32);
             this.menuTrangChu.Text = "Trang chủ";
+            this.menuTrangChu.Click += new System.EventHandler(this.menuTrangChu_Click);
             // 
             // menuHangHoa
             // 
             this.menuHangHoa.Name = "menuHangHoa";
-            this.menuHangHoa.Size = new System.Drawing.Size(109, 32);
+            this.menuHangHoa.Size = new System.Drawing.Size(111, 32);
             this.menuHangHoa.Text = "Hàng hóa";
+            this.menuHangHoa.Click += new System.EventHandler(this.menuHangHoa_Click);
             // 
             // menuNhanVien
             // 
             this.menuNhanVien.Name = "menuNhanVien";
-            this.menuNhanVien.Size = new System.Drawing.Size(112, 32);
+            this.menuNhanVien.Size = new System.Drawing.Size(114, 32);
             this.menuNhanVien.Text = "Nhân viên";
+            this.menuNhanVien.Click += new System.EventHandler(this.menuNhanVien_Click);
             // 
             // tabControl1
             // 
@@ -204,6 +207,7 @@
             this.btnSearchKh.TabIndex = 1;
             this.btnSearchKh.Text = "Tìm kiếm";
             this.btnSearchKh.UseVisualStyleBackColor = false;
+            this.btnSearchKh.Click += new System.EventHandler(this.btnSearchKh_Click);
             // 
             // btnExitKH
             // 
@@ -216,6 +220,7 @@
             this.btnExitKH.TabIndex = 7;
             this.btnExitKH.Text = "Thoát";
             this.btnExitKH.UseVisualStyleBackColor = false;
+            this.btnExitKH.Click += new System.EventHandler(this.btnExitHD_Click);
             // 
             // btnDeleteKh
             // 
@@ -228,6 +233,7 @@
             this.btnDeleteKh.TabIndex = 5;
             this.btnDeleteKh.Text = "Xóa";
             this.btnDeleteKh.UseVisualStyleBackColor = false;
+            this.btnDeleteKh.Click += new System.EventHandler(this.btnDeleteKh_Click);
             // 
             // btnUpdate
             // 
@@ -240,6 +246,7 @@
             this.btnUpdate.TabIndex = 4;
             this.btnUpdate.Text = "Sửa";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnInsertKh
             // 
@@ -252,6 +259,7 @@
             this.btnInsertKh.TabIndex = 3;
             this.btnInsertKh.Text = "Thêm";
             this.btnInsertKh.UseVisualStyleBackColor = false;
+            this.btnInsertKh.Click += new System.EventHandler(this.btnInsertKh_Click);
             // 
             // btnViewKh
             // 
@@ -264,16 +272,20 @@
             this.btnViewKh.TabIndex = 2;
             this.btnViewKh.Text = "Xem";
             this.btnViewKh.UseVisualStyleBackColor = false;
+            this.btnViewKh.Click += new System.EventHandler(this.btnViewKh_Click);
             // 
             // dgvKh
             // 
+            this.dgvKh.AllowUserToOrderColumns = true;
             this.dgvKh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKh.Location = new System.Drawing.Point(44, 246);
             this.dgvKh.Margin = new System.Windows.Forms.Padding(4);
             this.dgvKh.Name = "dgvKh";
+            this.dgvKh.ReadOnly = true;
             this.dgvKh.RowHeadersWidth = 51;
             this.dgvKh.Size = new System.Drawing.Size(927, 271);
             this.dgvKh.TabIndex = 1;
+            this.dgvKh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKh_CellClick);
             // 
             // groupBox1
             // 

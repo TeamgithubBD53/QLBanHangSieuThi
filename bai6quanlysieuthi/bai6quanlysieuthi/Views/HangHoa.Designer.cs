@@ -175,18 +175,21 @@
             this.menuTrangChu.Name = "menuTrangChu";
             this.menuTrangChu.Size = new System.Drawing.Size(110, 32);
             this.menuTrangChu.Text = "Trang chủ";
+            this.menuTrangChu.Click += new System.EventHandler(this.menuTrangChu_Click);
             // 
             // menuKhachHang
             // 
             this.menuKhachHang.Name = "menuKhachHang";
             this.menuKhachHang.Size = new System.Drawing.Size(128, 32);
             this.menuKhachHang.Text = "Khách hàng";
+            this.menuKhachHang.Click += new System.EventHandler(this.menuKhachHang_Click);
             // 
             // menuNhanVien
             // 
             this.menuNhanVien.Name = "menuNhanVien";
             this.menuNhanVien.Size = new System.Drawing.Size(114, 32);
             this.menuNhanVien.Text = "Nhân viên";
+            this.menuNhanVien.Click += new System.EventHandler(this.menuNhanVien_Click);
             // 
             // errorProvider1
             // 
@@ -229,6 +232,7 @@
             this.btnSearch_KQ.TabIndex = 26;
             this.btnSearch_KQ.Text = "Tìm kiếm";
             this.btnSearch_KQ.UseVisualStyleBackColor = false;
+            this.btnSearch_KQ.Click += new System.EventHandler(this.btnSearch_KQ_Click);
             // 
             // btnExit_KQ
             // 
@@ -241,6 +245,7 @@
             this.btnExit_KQ.TabIndex = 21;
             this.btnExit_KQ.Text = "Thoát";
             this.btnExit_KQ.UseVisualStyleBackColor = false;
+            this.btnExit_KQ.Click += new System.EventHandler(this.btnExit_KQ_Click);
             // 
             // groupBox3
             // 
@@ -275,6 +280,7 @@
             this.btnDelete_QH.TabIndex = 16;
             this.btnDelete_QH.Text = "Xóa";
             this.btnDelete_QH.UseVisualStyleBackColor = false;
+            this.btnDelete_QH.Click += new System.EventHandler(this.btnDelete_QH_Click);
             // 
             // btnUpdate_QH
             // 
@@ -287,6 +293,7 @@
             this.btnUpdate_QH.TabIndex = 18;
             this.btnUpdate_QH.Text = "Sửa";
             this.btnUpdate_QH.UseVisualStyleBackColor = false;
+            this.btnUpdate_QH.Click += new System.EventHandler(this.btnUpdate_QH_Click);
             // 
             // rtbViTriQh
             // 
@@ -308,6 +315,7 @@
             this.btnInsert_QH.TabIndex = 17;
             this.btnInsert_QH.Text = "Thêm";
             this.btnInsert_QH.UseVisualStyleBackColor = false;
+            this.btnInsert_QH.Click += new System.EventHandler(this.btnInsert_QH_Click);
             // 
             // label34
             // 
@@ -329,6 +337,7 @@
             this.btnView_QH.TabIndex = 16;
             this.btnView_QH.Text = "Xem";
             this.btnView_QH.UseVisualStyleBackColor = false;
+            this.btnView_QH.Click += new System.EventHandler(this.btnView_QH_Click);
             // 
             // txtTenQuayH
             // 
@@ -373,6 +382,7 @@
             this.dgvQuayHang.RowHeadersWidth = 51;
             this.dgvQuayHang.Size = new System.Drawing.Size(411, 215);
             this.dgvQuayHang.TabIndex = 1;
+            this.dgvQuayHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQuayHang_CellClick);
             // 
             // groupBox2
             // 
@@ -407,6 +417,7 @@
             this.btnDelete_KH.TabIndex = 15;
             this.btnDelete_KH.Text = "Xóa";
             this.btnDelete_KH.UseVisualStyleBackColor = false;
+            this.btnDelete_KH.Click += new System.EventHandler(this.btnDelete_KH_Click);
             // 
             // btnUpdate_KH
             // 
@@ -419,6 +430,7 @@
             this.btnUpdate_KH.TabIndex = 14;
             this.btnUpdate_KH.Text = "Sửa";
             this.btnUpdate_KH.UseVisualStyleBackColor = false;
+            this.btnUpdate_KH.Click += new System.EventHandler(this.btnUpdate_KH_Click);
             // 
             // btnInsert_KH
             // 
@@ -431,6 +443,7 @@
             this.btnInsert_KH.TabIndex = 13;
             this.btnInsert_KH.Text = "Thêm";
             this.btnInsert_KH.UseVisualStyleBackColor = false;
+            this.btnInsert_KH.Click += new System.EventHandler(this.btnInsert_KH_Click);
             // 
             // btnView_KH
             // 
@@ -443,6 +456,7 @@
             this.btnView_KH.TabIndex = 12;
             this.btnView_KH.Text = "Xem";
             this.btnView_KH.UseVisualStyleBackColor = false;
+            this.btnView_KH.Click += new System.EventHandler(this.btnView_KH_Click);
             // 
             // rtbDiaChiKho
             // 
@@ -505,6 +519,7 @@
             this.dgvKhoHang.RowHeadersWidth = 51;
             this.dgvKhoHang.Size = new System.Drawing.Size(411, 215);
             this.dgvKhoHang.TabIndex = 0;
+            this.dgvKhoHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhoHang_CellClick);
             // 
             // tabPage4
             // 
@@ -532,6 +547,7 @@
             this.dgvXK.RowHeadersWidth = 51;
             this.dgvXK.Size = new System.Drawing.Size(901, 346);
             this.dgvXK.TabIndex = 29;
+            this.dgvXK.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvXK_CellClick);
             // 
             // btnExit_XK
             // 
@@ -544,6 +560,7 @@
             this.btnExit_XK.TabIndex = 28;
             this.btnExit_XK.Text = "Thoát";
             this.btnExit_XK.UseVisualStyleBackColor = false;
+            this.btnExit_XK.Click += new System.EventHandler(this.btnExit_XK_Click);
             // 
             // btnDelete_XK
             // 
@@ -556,6 +573,7 @@
             this.btnDelete_XK.TabIndex = 26;
             this.btnDelete_XK.Text = "Xóa";
             this.btnDelete_XK.UseVisualStyleBackColor = false;
+            this.btnDelete_XK.Click += new System.EventHandler(this.btnDelete_XK_Click);
             // 
             // btnUpdate_XK
             // 
@@ -568,6 +586,7 @@
             this.btnUpdate_XK.TabIndex = 25;
             this.btnUpdate_XK.Text = "Sửa";
             this.btnUpdate_XK.UseVisualStyleBackColor = false;
+            this.btnUpdate_XK.Click += new System.EventHandler(this.btnUpdate_XK_Click);
             // 
             // btnInsert_XK
             // 
@@ -580,6 +599,7 @@
             this.btnInsert_XK.TabIndex = 24;
             this.btnInsert_XK.Text = "Thêm";
             this.btnInsert_XK.UseVisualStyleBackColor = false;
+            this.btnInsert_XK.Click += new System.EventHandler(this.btnInsert_XK_Click);
             // 
             // btnView_XK
             // 
@@ -592,6 +612,7 @@
             this.btnView_XK.TabIndex = 23;
             this.btnView_XK.Text = "Xem";
             this.btnView_XK.UseVisualStyleBackColor = false;
+            this.btnView_XK.Click += new System.EventHandler(this.btnView_XK_Click);
             // 
             // panel9
             // 
@@ -626,6 +647,7 @@
             this.btnSearch_XK.TabIndex = 19;
             this.btnSearch_XK.Text = "Tìm kiếm";
             this.btnSearch_XK.UseVisualStyleBackColor = false;
+            this.btnSearch_XK.Click += new System.EventHandler(this.btnSearch_XK_Click);
             // 
             // dtpNgayLapXk
             // 
@@ -645,6 +667,7 @@
             this.btnDetail_XK.TabIndex = 20;
             this.btnDetail_XK.Text = "Chi tiết";
             this.btnDetail_XK.UseVisualStyleBackColor = false;
+            this.btnDetail_XK.Click += new System.EventHandler(this.btnDetail_XK_Click);
             // 
             // cbMaQuayXK
             // 
@@ -797,6 +820,7 @@
             this.btnExit_MH.TabIndex = 13;
             this.btnExit_MH.Text = "Thoát";
             this.btnExit_MH.UseVisualStyleBackColor = false;
+            this.btnExit_MH.Click += new System.EventHandler(this.btnExit_MH_Click);
             // 
             // btnDelete_MH
             // 
@@ -809,6 +833,7 @@
             this.btnDelete_MH.TabIndex = 11;
             this.btnDelete_MH.Text = "Xóa";
             this.btnDelete_MH.UseVisualStyleBackColor = false;
+            this.btnDelete_MH.Click += new System.EventHandler(this.btnDelete_MH_Click);
             // 
             // btnUpdate_MH
             // 
@@ -821,6 +846,7 @@
             this.btnUpdate_MH.TabIndex = 10;
             this.btnUpdate_MH.Text = "Sửa";
             this.btnUpdate_MH.UseVisualStyleBackColor = false;
+            this.btnUpdate_MH.Click += new System.EventHandler(this.btnUpdate_MH_Click);
             // 
             // btnInsert_MH
             // 
@@ -833,6 +859,7 @@
             this.btnInsert_MH.TabIndex = 9;
             this.btnInsert_MH.Text = "Thêm";
             this.btnInsert_MH.UseVisualStyleBackColor = false;
+            this.btnInsert_MH.Click += new System.EventHandler(this.btnInsert_MH_Click);
             // 
             // btnView_MH
             // 
@@ -845,6 +872,7 @@
             this.btnView_MH.TabIndex = 8;
             this.btnView_MH.Text = "Xem";
             this.btnView_MH.UseVisualStyleBackColor = false;
+            this.btnView_MH.Click += new System.EventHandler(this.btnView_MH_Click);
             // 
             // dgvMatHang
             // 
@@ -855,6 +883,7 @@
             this.dgvMatHang.RowHeadersWidth = 51;
             this.dgvMatHang.Size = new System.Drawing.Size(891, 300);
             this.dgvMatHang.TabIndex = 1;
+            this.dgvMatHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMatHang_CellClick);
             // 
             // panel1
             // 
@@ -890,6 +919,7 @@
             this.btnSearch_MH.TabIndex = 12;
             this.btnSearch_MH.Text = "Tìm kiếm";
             this.btnSearch_MH.UseVisualStyleBackColor = false;
+            this.btnSearch_MH.Click += new System.EventHandler(this.btnSearch_MH_Click);
             // 
             // txtGiaMh
             // 
@@ -1102,6 +1132,7 @@
             this.btnSearch_NSX.TabIndex = 11;
             this.btnSearch_NSX.Text = "Tìm kiếm";
             this.btnSearch_NSX.UseVisualStyleBackColor = false;
+            this.btnSearch_NSX.Click += new System.EventHandler(this.btnSearch_NSX_Click);
             // 
             // txtDienThoaiNCC
             // 
@@ -1204,6 +1235,7 @@
             this.btnExit_NSX.TabIndex = 19;
             this.btnExit_NSX.Text = "Thoát";
             this.btnExit_NSX.UseVisualStyleBackColor = false;
+            this.btnExit_NSX.Click += new System.EventHandler(this.btnExit_NSX_Click);
             // 
             // btnDelete_NSX
             // 
@@ -1216,6 +1248,7 @@
             this.btnDelete_NSX.TabIndex = 17;
             this.btnDelete_NSX.Text = "Xóa";
             this.btnDelete_NSX.UseVisualStyleBackColor = false;
+            this.btnDelete_NSX.Click += new System.EventHandler(this.btnDelete_NSX_Click);
             // 
             // btnUpdate_NSX
             // 
@@ -1228,6 +1261,7 @@
             this.btnUpdate_NSX.TabIndex = 16;
             this.btnUpdate_NSX.Text = "Sửa";
             this.btnUpdate_NSX.UseVisualStyleBackColor = false;
+            this.btnUpdate_NSX.Click += new System.EventHandler(this.btnUpdate_NSX_Click);
             // 
             // btnInsert_NSX
             // 
@@ -1240,6 +1274,7 @@
             this.btnInsert_NSX.TabIndex = 15;
             this.btnInsert_NSX.Text = "Thêm";
             this.btnInsert_NSX.UseVisualStyleBackColor = false;
+            this.btnInsert_NSX.Click += new System.EventHandler(this.btnInsert_NSX_Click);
             // 
             // btnView_NSX
             // 
@@ -1252,6 +1287,7 @@
             this.btnView_NSX.TabIndex = 14;
             this.btnView_NSX.Text = "Xem";
             this.btnView_NSX.UseVisualStyleBackColor = false;
+            this.btnView_NSX.Click += new System.EventHandler(this.btnView_NSX_Click);
             // 
             // dgvNSX
             // 
@@ -1262,6 +1298,7 @@
             this.dgvNSX.RowHeadersWidth = 51;
             this.dgvNSX.Size = new System.Drawing.Size(947, 305);
             this.dgvNSX.TabIndex = 1;
+            this.dgvNSX.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNSX_CellClick);
             // 
             // label6
             // 

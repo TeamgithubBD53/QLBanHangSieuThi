@@ -6,7 +6,6 @@ namespace bai6quanlysieuthi.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data;
 
-
     [Table("phieuxuatkho")]
     public partial class phieuxuatkho
     {
