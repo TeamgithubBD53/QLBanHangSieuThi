@@ -448,17 +448,17 @@ namespace bai6quanlysieuthi.Views
         {
             dgvXK.DataSource = XuatKhoController.Instance.XemXuatKho();
             dgvXK.Columns["ma"].HeaderText = @"Mã xuất kho";
-            dgvXK.Columns["ma"].Width = 150;
+            dgvXK.Columns["ma"].Width = 145;
             dgvXK.Columns["makhohang"].HeaderText = @"Mã kho hàng";
-            dgvXK.Columns["makhohang"].Width = 170;
+            dgvXK.Columns["makhohang"].Width = 165;
             dgvXK.Columns["ngayxuat"].HeaderText = @"Ngày xuất";
-            dgvXK.Columns["ngayxuat"].Width = 150;
+            dgvXK.Columns["ngayxuat"].Width = 145;
             dgvXK.Columns["tonggiatri"].HeaderText = @"Tổng giá trị";
             dgvXK.Columns["tonggiatri"].Width = 150;
             dgvXK.Columns["maquay"].HeaderText = @"Mã quầy";
             dgvXK.Columns["maquay"].Width = 120;
             dgvXK.Columns["manhanvien"].HeaderText = @"Mã nv";
-            dgvXK.Columns["manhanvien"].Width = 120;
+            dgvXK.Columns["manhanvien"].Width = 110;
         }
 
         private void dgvXK_CellClick(object sender, DataGridViewCellEventArgs e)
