@@ -27,7 +27,6 @@ namespace bai6quanlysieuthi.Controller
         public List<hoadon> XemHoaDon()
         {
             List<hoadon> list = new List<hoadon>();
-            //string query = "select ma,manhanvien,ngaylap,tonggiatri,thanhtien,makhachhang from hoadon";
             string query = "select ma,manhanvien,ngaylap,tonggiatri,thanhtien, makhachhang from hoadon left join  khachmuahang on hoadon.ma = khachmuahang.mahoadon";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow item in data.Rows)
@@ -40,15 +39,13 @@ namespace bai6quanlysieuthi.Controller
         // thêm hóa đơn
         public bool InsertHoaDon(string ma, DateTime ngaylap, string manv, string makh)
         {
-            //string query = string.Format("insert hoadon(ma,ngaylap,manhanvien,makhachhang) values(N'{0}',N'{1}',N'{2}',N'{3}')", ma, ngaylap, manv, makh);
-            string query = string.Format("insert hoadon(ma,ngaylap,manhanvien) values(N'{0}',N'{1}',N'{2}')", ma, ngaylap, manv);
+            string query = string.Format("insert hoadon(ma,ngaylap,manhanvien,makhachhang) values(N'{0}',N'{1}',N'{2}',N'{3}')", ma, ngaylap, manv, makh);
             return DataProvider.Instance.ExecuteNonQuery(query) > 0;
         }
         // sửa hóa đơn
         public bool UpdateHoaDon(string ma, DateTime ngaylap, string manv, string makh)
         {
-            //string query = string.Format("update hoadon set ngaylap=N'{0}',manhanvien=N'{1}',makhachhang=N'{2}' where ma=N'{3}'", ngaylap, manv, makh, ma);
-            string query = string.Format("update hoadon set ngaylap=N'{0}',manhanvien=N'{1}' where ma=N'{2}'", ngaylap, manv, ma);
+            string query = string.Format("update hoadon set ngaylap=N'{0}',manhanvien=N'{1}',makhachhang=N'{2}' where ma=N'{3}'", ngaylap, manv, makh, ma);
             return DataProvider.Instance.ExecuteNonQuery(query) > 0;
         }
         //xóa hóa đơn
