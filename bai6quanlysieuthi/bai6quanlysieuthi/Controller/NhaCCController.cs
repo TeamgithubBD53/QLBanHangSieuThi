@@ -19,7 +19,7 @@ namespace bai6quanlysieuthi.Controller
                 if (instance == null)
                     instance = new NhaCCController();
                 return NhaCCController.instance;
-            }
+            } 
             private set { NhaCCController.instance = value; }
         }
 
