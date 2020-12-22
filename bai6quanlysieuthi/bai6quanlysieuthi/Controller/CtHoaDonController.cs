@@ -37,13 +37,6 @@ namespace bai6quanlysieuthi.Controller
             }
             return list;
         }
-        //load mã mặt hàng
-        public DataTable MatHang()
-        {
-            string query = "select ma from mathang";
-            DataTable data = DataProvider.Instance.ExecuteQuery(query);
-            return data;
-        }
         // thêm chi tiết hóa đơn
         public bool InsertCTHD(string mahd, string mamh, int sl)
         {

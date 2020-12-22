@@ -37,7 +37,6 @@ namespace bai6quanlysieuthi.Controller
             }
             return list;
         }
-        
         // thêm chi tiết phiếu giao ca
         public bool InsertCtGiaoCa(string magiaoca, string mamathang, int soluong)
         {

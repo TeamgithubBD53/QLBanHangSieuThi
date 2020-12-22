@@ -15,7 +15,6 @@ namespace bai6quanlysieuthi.Views
         public ChiTiet_HD()
         {
             InitializeComponent();
-            LoadMaMatHang();
         }
         #region View chi tiết hóa đơn
         private void btnView_CTHD_Click(object sender, EventArgs e)
@@ -26,23 +25,15 @@ namespace bai6quanlysieuthi.Views
         void ViewCtHoaDon()
         {
             dgvCtHoaDon.DataSource = CtHoaDonController.Instance.XemCtHoaDon();
-            dgvCtHoaDon.Columns["stt"].Width = 100;
+            dgvCtHoaDon.Columns["stt"].Width = 45;
             dgvCtHoaDon.Columns["mahoadon"].HeaderText = @"Mã hóa đơn";
-            dgvCtHoaDon.Columns["mahoadon"].Width = 200;
+            dgvCtHoaDon.Columns["mahoadon"].Width = 100;
             dgvCtHoaDon.Columns["mamathang"].HeaderText = @"Mã mặt hàng";
-            dgvCtHoaDon.Columns["mamathang"].Width = 200;
+            dgvCtHoaDon.Columns["mamathang"].Width = 100;
             dgvCtHoaDon.Columns["soluong"].HeaderText = @"Số lượng";
-            dgvCtHoaDon.Columns["soluong"].Width = 180;
+            dgvCtHoaDon.Columns["soluong"].Width = 100;
             dgvCtHoaDon.Columns["dongia"].HeaderText = @"Đơn giá";
-            dgvCtHoaDon.Columns["dongia"].Width = 180;
-        }
-        void LoadMaMatHang()
-        {
-            DataTable dt = CtHoaDonController.Instance.MatHang();
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                cbMaMatHang.Items.Add(dt.Rows[i][0]);
-            }
+            dgvCtHoaDon.Columns["dongia"].Width = 100;
         }
         #endregion
         private void btnInsert_CTHD_Click(object sender, EventArgs e)
