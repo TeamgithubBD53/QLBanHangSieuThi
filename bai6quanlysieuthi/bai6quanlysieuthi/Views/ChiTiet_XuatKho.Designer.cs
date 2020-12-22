@@ -278,6 +278,7 @@
             this.Controls.Add(this.btnView_CTXK);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ChiTiet_XuatKho";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi tiết phiếu xuất";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

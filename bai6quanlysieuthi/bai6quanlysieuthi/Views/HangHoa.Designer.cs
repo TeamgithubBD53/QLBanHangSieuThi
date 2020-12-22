@@ -1384,6 +1384,7 @@
             this.Controls.Add(this.mnsHangHoa);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HangHoa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hàng hóa";
             this.Load += new System.EventHandler(this.HangHoa_Load);
             this.mnsHangHoa.ResumeLayout(false);
