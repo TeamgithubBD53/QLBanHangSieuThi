@@ -673,13 +673,9 @@
             // 
             this.cbMaQuayXK.FormattingEnabled = true;
             this.cbMaQuayXK.Items.AddRange(new object[] {
-            "Rau củ",
-            "Ướp lạnh",
-            "Hải sản",
-            "Gia cầm",
-            "Đồ khô",
-            "Đồ hộp",
-            "Da vị"});
+            "Q01",
+            "Q02",
+            "Q03"});
             this.cbMaQuayXK.Location = new System.Drawing.Point(711, 15);
             this.cbMaQuayXK.Margin = new System.Windows.Forms.Padding(4);
             this.cbMaQuayXK.Name = "cbMaQuayXK";
@@ -690,13 +686,10 @@
             // 
             this.cbMaNhanVienXk.FormattingEnabled = true;
             this.cbMaNhanVienXk.Items.AddRange(new object[] {
-            "Rau củ",
-            "Ướp lạnh",
-            "Hải sản",
-            "Gia cầm",
-            "Đồ khô",
-            "Đồ hộp",
-            "Da vị"});
+            "NV01",
+            "NV02",
+            "NV03",
+            "NV04"});
             this.cbMaNhanVienXk.Location = new System.Drawing.Point(216, 102);
             this.cbMaNhanVienXk.Margin = new System.Windows.Forms.Padding(4);
             this.cbMaNhanVienXk.Name = "cbMaNhanVienXk";
@@ -707,13 +700,9 @@
             // 
             this.cbMaKhoHangXk.FormattingEnabled = true;
             this.cbMaKhoHangXk.Items.AddRange(new object[] {
-            "Rau củ",
-            "Ướp lạnh",
-            "Hải sản",
-            "Gia cầm",
-            "Đồ khô",
-            "Đồ hộp",
-            "Da vị"});
+            "K01",
+            "K02",
+            "K03"});
             this.cbMaKhoHangXk.Location = new System.Drawing.Point(216, 54);
             this.cbMaKhoHangXk.Margin = new System.Windows.Forms.Padding(4);
             this.cbMaKhoHangXk.Name = "cbMaKhoHangXk";
@@ -975,6 +964,10 @@
             // cbMaQuay
             // 
             this.cbMaQuay.FormattingEnabled = true;
+            this.cbMaQuay.Items.AddRange(new object[] {
+            "Q01",
+            "Q02",
+            "Q03"});
             this.cbMaQuay.Location = new System.Drawing.Point(755, 14);
             this.cbMaQuay.Margin = new System.Windows.Forms.Padding(4);
             this.cbMaQuay.Name = "cbMaQuay";
