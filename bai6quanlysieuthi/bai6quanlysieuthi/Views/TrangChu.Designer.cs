@@ -51,7 +51,6 @@
             this.menuNhanVien});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(882, 36);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
@@ -82,7 +81,7 @@
             this.btnDangNhap.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.Location = new System.Drawing.Point(564, 371);
-            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(4);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(108, 76);
             this.btnDangNhap.TabIndex = 3;
@@ -95,7 +94,7 @@
             this.btnkhachhang.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnkhachhang.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnkhachhang.Location = new System.Drawing.Point(92, 370);
-            this.btnkhachhang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnkhachhang.Margin = new System.Windows.Forms.Padding(4);
             this.btnkhachhang.Name = "btnkhachhang";
             this.btnkhachhang.Size = new System.Drawing.Size(107, 76);
             this.btnkhachhang.TabIndex = 4;
@@ -108,7 +107,7 @@
             this.btnHangHoa.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnHangHoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHangHoa.Location = new System.Drawing.Point(241, 370);
-            this.btnHangHoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHangHoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnHangHoa.Name = "btnHangHoa";
             this.btnHangHoa.Size = new System.Drawing.Size(107, 76);
             this.btnHangHoa.TabIndex = 5;
@@ -121,7 +120,7 @@
             this.btnNhanVien.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNhanVien.Location = new System.Drawing.Point(399, 370);
-            this.btnNhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.btnNhanVien.Name = "btnNhanVien";
             this.btnNhanVien.Size = new System.Drawing.Size(107, 76);
             this.btnNhanVien.TabIndex = 6;
@@ -134,7 +133,7 @@
             this.btnThoat.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.Location = new System.Drawing.Point(725, 371);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(107, 76);
             this.btnThoat.TabIndex = 7;
@@ -155,8 +154,9 @@
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TrangChu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trang chủ";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
