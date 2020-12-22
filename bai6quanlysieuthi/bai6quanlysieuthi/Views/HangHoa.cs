@@ -62,11 +62,11 @@ namespace bai6quanlysieuthi.Views
         {
             dgvKhoHang.DataSource = KhoHangController.Instance.XemKhoHang();
             dgvKhoHang.Columns["ma"].HeaderText = @"Mã kho";
-            dgvKhoHang.Columns["ma"].Width = 80;
+            dgvKhoHang.Columns["ma"].Width = 45;
             dgvKhoHang.Columns["ten"].HeaderText = @"Tên kho";
-            dgvKhoHang.Columns["ten"].Width = 200;
+            dgvKhoHang.Columns["ten"].Width = 100;
             dgvKhoHang.Columns["diachi"].HeaderText = @"Địa chỉ";
-            dgvKhoHang.Columns["diachi"].Width = 200;
+            dgvKhoHang.Columns["diachi"].Width = 150;
         }
 
         private void dgvKhoHang_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -251,22 +251,22 @@ namespace bai6quanlysieuthi.Views
         {
             dgvQuayHang.DataSource = QuayHangController.Instance.XemQuayHang();
             dgvQuayHang.Columns["ma"].HeaderText = @"Mã quầy";
-            dgvQuayHang.Columns["ma"].Width = 70;
+            dgvQuayHang.Columns["ma"].Width = 45;
             dgvQuayHang.Columns["ten"].HeaderText = @"Tên quầy";
-            dgvQuayHang.Columns["ten"].Width = 150;
+            dgvQuayHang.Columns["ten"].Width = 80;
             dgvQuayHang.Columns["vitri"].HeaderText = @"Vị trí";
-            dgvQuayHang.Columns["vitri"].Width = 150;
+            dgvQuayHang.Columns["vitri"].Width = 80;
         }
 
         void ViewQuayHang()
         {
             dgvQuayHang.DataSource = QuayHangController.Instance.XemQuayHang();
             dgvQuayHang.Columns["ma"].HeaderText = @"Mã quầy";
-            dgvQuayHang.Columns["ma"].Width = 70;
+            dgvQuayHang.Columns["ma"].Width = 45;
             dgvQuayHang.Columns["ten"].HeaderText = @"Tên quầy";
-            dgvQuayHang.Columns["ten"].Width = 150;
+            dgvQuayHang.Columns["ten"].Width = 80;
             dgvQuayHang.Columns["vitri"].HeaderText = @"Vị trí";
-            dgvQuayHang.Columns["vitri"].Width = 150;
+            dgvQuayHang.Columns["vitri"].Width = 80;
         }
         #endregion
 
@@ -412,6 +412,7 @@ namespace bai6quanlysieuthi.Views
         {
             dgvMatHang.DataSource = MatHangController.Instance.XemMatHang();
             dgvMatHang.Columns["ma"].HeaderText = @"Mã";
+
             dgvMatHang.Columns["ma"].Width = 80;
             dgvMatHang.Columns["ten"].HeaderText = @"Tên mặt hàng";
 
@@ -622,6 +623,7 @@ namespace bai6quanlysieuthi.Views
             dgvNSX.DataSource = NhaCCController.Instance.XemNhaCC();
             dgvNSX.Columns["ma"].HeaderText = @"Mã ncc";
 
+
             dgvNSX.Columns["ma"].Width = 80;
             dgvNSX.Columns["ten"].HeaderText = @"Tên ncc";
             dgvNSX.Columns["ten"].Width = 200;
@@ -631,6 +633,7 @@ namespace bai6quanlysieuthi.Views
             dgvNSX.Columns["sodienthoai"].Width = 150;
             dgvNSX.Columns["email"].HeaderText = @"Email";
             dgvNSX.Columns["email"].Width = 200;
+
 
         }
         private void btnView_NSX_Click(object sender, EventArgs e)

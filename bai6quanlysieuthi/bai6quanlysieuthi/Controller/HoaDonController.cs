@@ -27,10 +27,7 @@ namespace bai6quanlysieuthi.Controller
         public List<hoadon> XemHoaDon()
         {
             List<hoadon> list = new List<hoadon>();
-
-            //string query = "select ma,manhanvien,ngaylap,tonggiatri,thanhtien, makhachhang from hoadon left join  khachmuahang on hoadon.ma = khachmuahang.mahoadon";
-            string query = "select ma,manhanvien,ngaylap,tonggiatri,thanhtien, makhachhang from hoadon";
-
+            string query = "select ma,manhanvien,ngaylap,tonggiatri,thanhtien, makhachhang from hoadon left join  khachmuahang on hoadon.ma = khachmuahang.mahoadon";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow item in data.Rows)
             {
