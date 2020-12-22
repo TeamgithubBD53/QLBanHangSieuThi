@@ -66,7 +66,7 @@ namespace bai6quanlysieuthi.Views
             dgvKhoHang.Columns["ten"].HeaderText = @"Tên kho";
             dgvKhoHang.Columns["ten"].Width = 100;
             dgvKhoHang.Columns["diachi"].HeaderText = @"Địa chỉ";
-            dgvKhoHang.Columns["diachi"].Width = 150;
+            dgvKhoHang.Columns["diachi"].Width = 100;
         }
 
         private void dgvKhoHang_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -253,9 +253,11 @@ namespace bai6quanlysieuthi.Views
             dgvQuayHang.Columns["ma"].HeaderText = @"Mã quầy";
             dgvQuayHang.Columns["ma"].Width = 45;
             dgvQuayHang.Columns["ten"].HeaderText = @"Tên quầy";
-            dgvQuayHang.Columns["ten"].Width = 80;
+
+            dgvQuayHang.Columns["ten"].Width = 90;
             dgvQuayHang.Columns["vitri"].HeaderText = @"Vị trí";
-            dgvQuayHang.Columns["vitri"].Width = 80;
+            dgvQuayHang.Columns["vitri"].Width = 90;
+           
         }
 
         void ViewQuayHang()
@@ -264,9 +266,10 @@ namespace bai6quanlysieuthi.Views
             dgvQuayHang.Columns["ma"].HeaderText = @"Mã quầy";
             dgvQuayHang.Columns["ma"].Width = 45;
             dgvQuayHang.Columns["ten"].HeaderText = @"Tên quầy";
-            dgvQuayHang.Columns["ten"].Width = 80;
+            dgvQuayHang.Columns["ten"].Width = 90;
             dgvQuayHang.Columns["vitri"].HeaderText = @"Vị trí";
-            dgvQuayHang.Columns["vitri"].Width = 80;
+            dgvQuayHang.Columns["vitri"].Width = 90;
+
         }
         #endregion
 
