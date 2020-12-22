@@ -412,7 +412,7 @@ namespace bai6quanlysieuthi.Views
         {
             dgvMatHang.DataSource = MatHangController.Instance.XemMatHang();
             dgvMatHang.Columns["ma"].HeaderText = @"Mã";
-
+<<<<<<< HEAD
             dgvMatHang.Columns["ma"].Width = 100;
             dgvMatHang.Columns["ten"].HeaderText = @"Tên mặt hàng";
             dgvMatHang.Columns["ten"].Width = 200;
@@ -426,7 +426,22 @@ namespace bai6quanlysieuthi.Views
             dgvMatHang.Columns["manhacc"].Width = 100;
             dgvMatHang.Columns["gia"].HeaderText = @"Giá";
             dgvMatHang.Columns["gia"].Width = 100;
+=======
+            dgvMatHang.Columns["ma"].Width = 80;
+            dgvMatHang.Columns["ten"].HeaderText = @"Tên mặt hàng";
 
+            dgvMatHang.Columns["ten"].Width = 250;
+            dgvMatHang.Columns["loaimathang"].HeaderText = @"Loại mặt hàng";
+            dgvMatHang.Columns["loaimathang"].Width = 150;
+
+            dgvMatHang.Columns["donvitinh"].HeaderText = @"Đơn vị tính";
+            dgvMatHang.Columns["donvitinh"].Width = 80;
+            dgvMatHang.Columns["maquay"].HeaderText = @"Mã quầy";
+            dgvMatHang.Columns["maquay"].Width = 80;
+
+            dgvMatHang.Columns["manhacc"].Width = 80;
+            dgvMatHang.Columns["gia"].Width = 200;
+>>>>>>> 2551e28813e5acb8c1b3118da84c3c425ec050d2
         }
         private void btnView_MH_Click(object sender, EventArgs e)
         {
@@ -622,7 +637,7 @@ namespace bai6quanlysieuthi.Views
         {
             dgvNSX.DataSource = NhaCCController.Instance.XemNhaCC();
             dgvNSX.Columns["ma"].HeaderText = @"Mã ncc";
-
+<<<<<<< HEAD
             dgvNSX.Columns["ma"].Width = 100;
             dgvNSX.Columns["ten"].HeaderText = @"Tên ncc";
             dgvNSX.Columns["ten"].Width = 200;
@@ -632,7 +647,19 @@ namespace bai6quanlysieuthi.Views
             dgvNSX.Columns["sodienthoai"].Width = 150;
             dgvNSX.Columns["email"].HeaderText = @"Email";
             dgvNSX.Columns["email"].Width = 300;
+=======
 
+            dgvNSX.Columns["ma"].Width = 80;
+            dgvNSX.Columns["ten"].HeaderText = @"Tên ncc";
+            dgvNSX.Columns["ten"].Width = 200;
+            dgvNSX.Columns["diachi"].HeaderText = @"Địa chỉ";
+            dgvNSX.Columns["diachi"].Width = 300;
+            dgvNSX.Columns["sodienthoai"].HeaderText = @"Số điện thoại";
+            dgvNSX.Columns["sodienthoai"].Width = 150;
+            dgvNSX.Columns["email"].HeaderText = @"Email";
+            dgvNSX.Columns["email"].Width = 200;
+
+>>>>>>> 2551e28813e5acb8c1b3118da84c3c425ec050d2
         }
         private void btnView_NSX_Click(object sender, EventArgs e)
         {
