@@ -412,21 +412,6 @@ namespace bai6quanlysieuthi.Views
         {
             dgvMatHang.DataSource = MatHangController.Instance.XemMatHang();
             dgvMatHang.Columns["ma"].HeaderText = @"Mã";
-<<<<<<< HEAD
-            dgvMatHang.Columns["ma"].Width = 100;
-            dgvMatHang.Columns["ten"].HeaderText = @"Tên mặt hàng";
-            dgvMatHang.Columns["ten"].Width = 200;
-            dgvMatHang.Columns["loaimathang"].HeaderText = @"Loại mặt hàng";
-            dgvMatHang.Columns["loaimathang"].Width = 100;
-            dgvMatHang.Columns["donvitinh"].HeaderText = @"Đơn vị tính";
-            dgvMatHang.Columns["donvitinh"].Width = 100;
-            dgvMatHang.Columns["maquay"].HeaderText = @"Mã quầy";
-            dgvMatHang.Columns["maquay"].Width = 100;
-            dgvMatHang.Columns["manhacc"].HeaderText = @"Mã NCC";
-            dgvMatHang.Columns["manhacc"].Width = 100;
-            dgvMatHang.Columns["gia"].HeaderText = @"Giá";
-            dgvMatHang.Columns["gia"].Width = 100;
-=======
             dgvMatHang.Columns["ma"].Width = 80;
             dgvMatHang.Columns["ten"].HeaderText = @"Tên mặt hàng";
 
@@ -441,7 +426,6 @@ namespace bai6quanlysieuthi.Views
 
             dgvMatHang.Columns["manhacc"].Width = 80;
             dgvMatHang.Columns["gia"].Width = 200;
->>>>>>> 2551e28813e5acb8c1b3118da84c3c425ec050d2
         }
         private void btnView_MH_Click(object sender, EventArgs e)
         {
@@ -637,17 +621,6 @@ namespace bai6quanlysieuthi.Views
         {
             dgvNSX.DataSource = NhaCCController.Instance.XemNhaCC();
             dgvNSX.Columns["ma"].HeaderText = @"Mã ncc";
-<<<<<<< HEAD
-            dgvNSX.Columns["ma"].Width = 100;
-            dgvNSX.Columns["ten"].HeaderText = @"Tên ncc";
-            dgvNSX.Columns["ten"].Width = 200;
-            dgvNSX.Columns["diachi"].HeaderText = @"Địa chỉ";
-            dgvNSX.Columns["diachi"].Width = 150;
-            dgvNSX.Columns["sodienthoai"].HeaderText = @"Số điện thoại";
-            dgvNSX.Columns["sodienthoai"].Width = 150;
-            dgvNSX.Columns["email"].HeaderText = @"Email";
-            dgvNSX.Columns["email"].Width = 300;
-=======
 
             dgvNSX.Columns["ma"].Width = 80;
             dgvNSX.Columns["ten"].HeaderText = @"Tên ncc";
@@ -659,7 +632,6 @@ namespace bai6quanlysieuthi.Views
             dgvNSX.Columns["email"].HeaderText = @"Email";
             dgvNSX.Columns["email"].Width = 200;
 
->>>>>>> 2551e28813e5acb8c1b3118da84c3c425ec050d2
         }
         private void btnView_NSX_Click(object sender, EventArgs e)
         {
@@ -727,104 +699,8 @@ namespace bai6quanlysieuthi.Views
         }
         #endregion
 
-        private void btnUpdate_NSX_Click(object sender, EventArgs e)
-        {
-            if (txtMaNCC.Text == "" || txtTenNCC.Text == "" || txtDiaChiNCC.Text == "" || txtDienThoaiNCC.Text == "" || txtDiaChiNCC.Text == "")
-            {
-                if (txtNCC.Text == "")
-                    errorProvider1.SetError(txtNCC, "Chưa nhập mã nhà cung cấp");
-                if (txtTenNCC.Text == "")
-                    errorProvider1.SetError(txtTenNCC, "Chưa nhập tên nhà cung cấp");
-                if (txtDienThoaiNCC.Text == "")
-                    errorProvider1.SetError(txtDienThoaiNCC, "Chưa nhập số điện thoại");
-                if (txtEmailNCC.Text == "")
-                    errorProvider1.SetError(txtEmailNCC, "Chưa nhập email");
-                if (txtDiaChiNCC.Text == "")
-                    errorProvider1.SetError(txtDiaChiNCC, "Chưa nhập địa chỉ");
-                MessageBox.Show("Nhập đầy đủ thông tin");
-                return;
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
-            try
-            {
-                string ma = txtNCC.Text;
-                string ten = txtTenNCC.Text;
-                string sdt = txtDienThoaiNCC.Text;
-                string email = txtEmailNCC.Text;
-                string diachi = txtDiaChiNCC.Text;
-                if (MessageBox.Show("Bạn có muốn sửa hay không", "Sửa", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
-                {
-                    if (NhaCCController.Instance.UpdateNhaCC(ma, ten, diachi, sdt, email))
-                    {
-                        MessageBox.Show("Sửa thành công");
-                        ViewNhaSanXuat();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Không thành công!");
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Lỗi dữ liệu");
-            }
-        }
 
-        private void btnDelete_NSX_Click(object sender, EventArgs e)
-        {
-            if (txtNCC.Text == "")
-            {
-                errorProvider1.SetError(txtNCC, "Chưa có mã cần xóa");
-                MessageBox.Show("Nhập mã cần xóa");
-                return;
-            }
-            try
-            {
-                string ma = txtNCC.Text;
-                if (MessageBox.Show("Bạn có muốn xóa hay không", "Xóa", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
-                {
-                    if (NhaCCController.Instance.DeleteNhaCC(ma))
-                    {
-                        MessageBox.Show("Xóa thành công");
-                        ViewNhaSanXuat();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Không thành công!");
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Lỗi dữ liệu");
-                return;
-            }
-        }
-
-        private void btnExit_NSX_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnSearch_NSX_Click(object sender, EventArgs e)
-        {
-            if (txtNCC.Text == "" && txtTenNCC.Text == "")
-            {
-                if (txtNCC.Text == "")
-                    errorProvider1.SetError(txtNCC, "Chưa có mã cần tìm");
-                if (txtTenNCC.Text == "")
-                    errorProvider1.SetError(txtTenNCC, "Chưa có tên cần tìm");
-                MessageBox.Show("Nhập vào thông tin cần tìm");
-                return;
-            }
-            dgvNSX.DataSource = NhaCCController.Instance.SearchNhaCC(txtNCC.Text, txtTenNCC.Text);
-        }
         #endregion
-
         #region Xuất kho
         private void btnDetail_XK_Click(object sender, EventArgs e)
         {
@@ -1036,6 +912,101 @@ namespace bai6quanlysieuthi.Views
 
         #endregion
 
-        
+        private void btnUpdate_NSX_Click(object sender, EventArgs e)
+        {
+            if (txtMaNCC.Text == "" || txtTenNCC.Text == "" || txtDiaChiNCC.Text == "" || txtDienThoaiNCC.Text == "" || txtDiaChiNCC.Text == "")
+            {
+                if (txtNCC.Text == "")
+                    errorProvider1.SetError(txtNCC, "Chưa nhập mã nhà cung cấp");
+                if (txtTenNCC.Text == "")
+                    errorProvider1.SetError(txtTenNCC, "Chưa nhập tên nhà cung cấp");
+                if (txtDienThoaiNCC.Text == "")
+                    errorProvider1.SetError(txtDienThoaiNCC, "Chưa nhập số điện thoại");
+                if (txtEmailNCC.Text == "")
+                    errorProvider1.SetError(txtEmailNCC, "Chưa nhập email");
+                if (txtDiaChiNCC.Text == "")
+                    errorProvider1.SetError(txtDiaChiNCC, "Chưa nhập địa chỉ");
+                MessageBox.Show("Nhập đầy đủ thông tin");
+                return;
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+            try
+            {
+                string ma = txtNCC.Text;
+                string ten = txtTenNCC.Text;
+                string sdt = txtDienThoaiNCC.Text;
+                string email = txtEmailNCC.Text;
+                string diachi = txtDiaChiNCC.Text;
+                if (MessageBox.Show("Bạn có muốn sửa hay không", "Sửa", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    if (NhaCCController.Instance.UpdateNhaCC(ma, ten, diachi, sdt, email))
+                    {
+                        MessageBox.Show("Sửa thành công");
+                        ViewNhaSanXuat();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Không thành công!");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi dữ liệu");
+            }
+        }
+
+        private void btnDelete_NSX_Click(object sender, EventArgs e)
+        {
+            if (txtNCC.Text == "")
+            {
+                errorProvider1.SetError(txtNCC, "Chưa có mã cần xóa");
+                MessageBox.Show("Nhập mã cần xóa");
+                return;
+            }
+            try
+            {
+                string ma = txtNCC.Text;
+                if (MessageBox.Show("Bạn có muốn xóa hay không", "Xóa", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    if (NhaCCController.Instance.DeleteNhaCC(ma))
+                    {
+                        MessageBox.Show("Xóa thành công");
+                        ViewNhaSanXuat();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Không thành công!");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi dữ liệu");
+                return;
+            }
+        }
+
+        private void btnExit_NSX_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnSearch_NSX_Click(object sender, EventArgs e)
+        {
+            if (txtNCC.Text == "" && txtTenNCC.Text == "")
+            {
+                if (txtNCC.Text == "")
+                    errorProvider1.SetError(txtNCC, "Chưa có mã cần tìm");
+                if (txtTenNCC.Text == "")
+                    errorProvider1.SetError(txtTenNCC, "Chưa có tên cần tìm");
+                MessageBox.Show("Nhập vào thông tin cần tìm");
+                return;
+            }
+            dgvNSX.DataSource = NhaCCController.Instance.SearchNhaCC(txtNCC.Text, txtTenNCC.Text);
+        }
     }
 }
