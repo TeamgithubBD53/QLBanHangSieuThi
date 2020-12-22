@@ -690,13 +690,11 @@
             // 
             this.cbMaNhanVienXk.FormattingEnabled = true;
             this.cbMaNhanVienXk.Items.AddRange(new object[] {
-            "Rau củ",
-            "Ướp lạnh",
-            "Hải sản",
-            "Gia cầm",
-            "Đồ khô",
-            "Đồ hộp",
-            "Da vị"});
+            "NV01",
+            "NV02",
+            "NV03",
+            "NV04",
+            "NV05"});
             this.cbMaNhanVienXk.Location = new System.Drawing.Point(216, 102);
             this.cbMaNhanVienXk.Margin = new System.Windows.Forms.Padding(4);
             this.cbMaNhanVienXk.Name = "cbMaNhanVienXk";
@@ -707,13 +705,11 @@
             // 
             this.cbMaKhoHangXk.FormattingEnabled = true;
             this.cbMaKhoHangXk.Items.AddRange(new object[] {
-            "Rau củ",
-            "Ướp lạnh",
-            "Hải sản",
-            "Gia cầm",
-            "Đồ khô",
-            "Đồ hộp",
-            "Da vị"});
+            "KH01",
+            "KH02",
+            "KH03",
+            "KH04",
+            "KH05"});
             this.cbMaKhoHangXk.Location = new System.Drawing.Point(216, 54);
             this.cbMaKhoHangXk.Margin = new System.Windows.Forms.Padding(4);
             this.cbMaKhoHangXk.Name = "cbMaKhoHangXk";
