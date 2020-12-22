@@ -70,9 +70,7 @@
             this.cbbSeachHD = new System.Windows.Forms.ComboBox();
             this.btnSearchHD = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtMaKhachHang = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtMaNhanVien = new System.Windows.Forms.TextBox();
             this.txtThanhTien = new System.Windows.Forms.TextBox();
             this.txtTongGiaTri = new System.Windows.Forms.TextBox();
             this.txtMaHD = new System.Windows.Forms.TextBox();
@@ -83,6 +81,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtMaKhachHang = new System.Windows.Forms.ComboBox();
+            this.txtMaNhanVien = new System.Windows.Forms.ComboBox();
             this.mnsKhachHang.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -113,21 +113,21 @@
             // menuTrangChu
             // 
             this.menuTrangChu.Name = "menuTrangChu";
-            this.menuTrangChu.Size = new System.Drawing.Size(110, 32);
+            this.menuTrangChu.Size = new System.Drawing.Size(108, 32);
             this.menuTrangChu.Text = "Trang chủ";
             this.menuTrangChu.Click += new System.EventHandler(this.menuTrangChu_Click);
             // 
             // menuHangHoa
             // 
             this.menuHangHoa.Name = "menuHangHoa";
-            this.menuHangHoa.Size = new System.Drawing.Size(111, 32);
+            this.menuHangHoa.Size = new System.Drawing.Size(109, 32);
             this.menuHangHoa.Text = "Hàng hóa";
             this.menuHangHoa.Click += new System.EventHandler(this.menuHangHoa_Click);
             // 
             // menuNhanVien
             // 
             this.menuNhanVien.Name = "menuNhanVien";
-            this.menuNhanVien.Size = new System.Drawing.Size(114, 32);
+            this.menuNhanVien.Size = new System.Drawing.Size(112, 32);
             this.menuNhanVien.Text = "Nhân viên";
             this.menuNhanVien.Click += new System.EventHandler(this.menuNhanVien_Click);
             // 
@@ -564,9 +564,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtMaNhanVien);
             this.groupBox2.Controls.Add(this.txtMaKhachHang);
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.txtMaNhanVien);
             this.groupBox2.Controls.Add(this.txtThanhTien);
             this.groupBox2.Controls.Add(this.txtTongGiaTri);
             this.groupBox2.Controls.Add(this.txtMaHD);
@@ -585,15 +585,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Hóa đơn";
             // 
-            // txtMaKhachHang
-            // 
-            this.txtMaKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaKhachHang.Location = new System.Drawing.Point(244, 66);
-            this.txtMaKhachHang.Margin = new System.Windows.Forms.Padding(4);
-            this.txtMaKhachHang.Name = "txtMaKhachHang";
-            this.txtMaKhachHang.Size = new System.Drawing.Size(183, 29);
-            this.txtMaKhachHang.TabIndex = 27;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -604,15 +595,6 @@
             this.label11.Size = new System.Drawing.Size(140, 24);
             this.label11.TabIndex = 26;
             this.label11.Text = "Mã khách hàng";
-            // 
-            // txtMaNhanVien
-            // 
-            this.txtMaNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaNhanVien.Location = new System.Drawing.Point(244, 107);
-            this.txtMaNhanVien.Margin = new System.Windows.Forms.Padding(4);
-            this.txtMaNhanVien.Name = "txtMaNhanVien";
-            this.txtMaNhanVien.Size = new System.Drawing.Size(183, 29);
-            this.txtMaNhanVien.TabIndex = 25;
             // 
             // txtThanhTien
             // 
@@ -711,6 +693,22 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // txtMaKhachHang
+            // 
+            this.txtMaKhachHang.FormattingEnabled = true;
+            this.txtMaKhachHang.Location = new System.Drawing.Point(242, 66);
+            this.txtMaKhachHang.Name = "txtMaKhachHang";
+            this.txtMaKhachHang.Size = new System.Drawing.Size(185, 33);
+            this.txtMaKhachHang.TabIndex = 27;
+            // 
+            // txtMaNhanVien
+            // 
+            this.txtMaNhanVien.FormattingEnabled = true;
+            this.txtMaNhanVien.Location = new System.Drawing.Point(244, 107);
+            this.txtMaNhanVien.Name = "txtMaNhanVien";
+            this.txtMaNhanVien.Size = new System.Drawing.Size(185, 33);
+            this.txtMaNhanVien.TabIndex = 28;
+            // 
             // KhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -796,9 +794,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtMaNhanVien;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.TextBox txtMaKhachHang;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox txtMaNhanVien;
+        private System.Windows.Forms.ComboBox txtMaKhachHang;
     }
 }

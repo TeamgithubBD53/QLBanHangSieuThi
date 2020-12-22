@@ -38,6 +38,20 @@ namespace bai6quanlysieuthi.Controller
             }
             return list;
         }
+        //load ma khach hang
+        public DataTable MaKhachHang()
+        {
+            string query = "select ma from khachhang";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
+        //load ma nhan vien
+        public DataTable MaNhanVien()
+        {
+            string query = "select ma from nhanvien";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
         // them khach hang
         public bool InsertKhachHang(string ma, string ten, string diachi, string sodt, float uudai)
         {

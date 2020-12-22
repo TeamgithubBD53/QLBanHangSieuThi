@@ -17,8 +17,25 @@ namespace bai6quanlysieuthi.Views
         public KhachHang()
         {
             InitializeComponent();
+            LoadMaKhachHang();
+            LoadMaNhanVien();
         }
-
+        void LoadMaKhachHang()
+        {
+            DataTable dt = KhachhangController.Instance.MaKhachHang();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                txtMaKhachHang.Items.Add(dt.Rows[i][0]);
+            }
+        }
+        void LoadMaNhanVien()
+        {
+            DataTable dt = KhachhangController.Instance.MaNhanVien();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                txtMaNhanVien.Items.Add(dt.Rows[i][0]);
+            }
+        }
 
         #region menustrip
         private void menuTrangChu_Click(object sender, EventArgs e)
@@ -60,11 +77,11 @@ namespace bai6quanlysieuthi.Views
         {
             dgvHoaDon.DataSource = HoaDonController.Instance.XemHoaDon();
             dgvHoaDon.Columns["ma"].HeaderText = @"Mã";
-            dgvHoaDon.Columns["ma"].Width = 80;
+            dgvHoaDon.Columns["ma"].Width = 100;
             dgvHoaDon.Columns["makhachhang"].HeaderText = @"Mã khách hàng";
-            dgvHoaDon.Columns["makhachhang"].Width = 80;
+            dgvHoaDon.Columns["makhachhang"].Width = 100;
             dgvHoaDon.Columns["manhanvien"].HeaderText = @"Mã nhân viên";
-            dgvHoaDon.Columns["manhanvien"].Width = 80;
+            dgvHoaDon.Columns["manhanvien"].Width = 100;
             dgvHoaDon.Columns["ngaylap"].HeaderText = @"Ngày lập";
             dgvHoaDon.Columns["ngaylap"].Width = 160;
             dgvHoaDon.Columns["tonggiatri"].HeaderText = @"Tổng giá trị";
