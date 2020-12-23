@@ -60,17 +60,17 @@ namespace bai6quanlysieuthi.Views
         {
             dgvHoaDon.DataSource = HoaDonController.Instance.XemHoaDon();
             dgvHoaDon.Columns["ma"].HeaderText = @"Mã";
-            dgvHoaDon.Columns["ma"].Width = 80;
+            dgvHoaDon.Columns["ma"].Width = 45;
             dgvHoaDon.Columns["makhachhang"].HeaderText = @"Mã khách hàng";
             dgvHoaDon.Columns["makhachhang"].Width = 80;
             dgvHoaDon.Columns["manhanvien"].HeaderText = @"Mã nhân viên";
             dgvHoaDon.Columns["manhanvien"].Width = 80;
             dgvHoaDon.Columns["ngaylap"].HeaderText = @"Ngày lập";
-            dgvHoaDon.Columns["ngaylap"].Width = 160;
+            dgvHoaDon.Columns["ngaylap"].Width = 90;
             dgvHoaDon.Columns["tonggiatri"].HeaderText = @"Tổng giá trị";
-            dgvHoaDon.Columns["tonggiatri"].Width = 200;
+            dgvHoaDon.Columns["tonggiatri"].Width = 80;
             dgvHoaDon.Columns["thanhtien"].HeaderText = @"Thành tiền";
-            dgvHoaDon.Columns["thanhtien"].Width = 200;
+            dgvHoaDon.Columns["thanhtien"].Width = 80;
         }
         private void dgvHoaDon_CellClick(object sender, DataGridViewCellEventArgs e)
         {

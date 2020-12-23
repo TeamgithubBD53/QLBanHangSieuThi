@@ -325,7 +325,6 @@
             this.Controls.Add(this.btnView_CTHD);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ChiTiet_HD";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi tiết hóa đơn";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCtHoaDon)).EndInit();
             this.panel1.ResumeLayout(false);
