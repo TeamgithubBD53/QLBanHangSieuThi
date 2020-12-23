@@ -49,15 +49,15 @@ namespace bai6quanlysieuthi.Views
         private void  ViewNhanVien() {
             dgvNhanVien.DataSource = NhanVienController.Instance.XemNhanVien();
             dgvNhanVien.Columns["ma"].HeaderText = @"Mã";
-            dgvNhanVien.Columns["ma"].Width = 45;
+            dgvNhanVien.Columns["ma"].Width = 80;
             dgvNhanVien.Columns["ten"].HeaderText = @"Họ và tên";
-            dgvNhanVien.Columns["ten"].Width = 100;
+            dgvNhanVien.Columns["ten"].Width = 200;
             dgvNhanVien.Columns["ngaysinh"].HeaderText = @"Ngày sinh";
-            dgvNhanVien.Columns["ngaysinh"].Width = 80;
+            dgvNhanVien.Columns["ngaysinh"].Width = 150;
             dgvNhanVien.Columns["diachi"].HeaderText = @"Địa chỉ";
-            dgvNhanVien.Columns["diachi"].Width = 120;
+            dgvNhanVien.Columns["diachi"].Width = 200;
             dgvNhanVien.Columns["sodienthoai"].HeaderText = @"Số điện thoại";
-            dgvNhanVien.Columns["sodienthoai"].Width = 80;
+            dgvNhanVien.Columns["sodienthoai"].Width = 150;
             dgvNhanVien.Columns["machucvu"].HeaderText = @"Mã chức vụ";
             dgvNhanVien.Columns["machucvu"].Width = 60;
             dgvNhanVien.Columns["taikhoan"].HeaderText = @"Tài khoản";
