@@ -722,6 +722,7 @@
             this.MainMenuStrip = this.mnsKhachHang;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "KhachHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KhachHang";
             this.mnsKhachHang.ResumeLayout(false);
             this.mnsKhachHang.PerformLayout();
