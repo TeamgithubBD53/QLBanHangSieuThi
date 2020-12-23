@@ -545,7 +545,7 @@
             this.dgvXK.Margin = new System.Windows.Forms.Padding(4);
             this.dgvXK.Name = "dgvXK";
             this.dgvXK.RowHeadersWidth = 51;
-            this.dgvXK.Size = new System.Drawing.Size(890, 346);
+            this.dgvXK.Size = new System.Drawing.Size(901, 346);
             this.dgvXK.TabIndex = 29;
             this.dgvXK.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvXK_CellClick);
             // 

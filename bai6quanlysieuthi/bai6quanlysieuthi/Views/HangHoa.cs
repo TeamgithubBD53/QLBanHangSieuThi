@@ -419,11 +419,9 @@ namespace bai6quanlysieuthi.Views
 
             dgvMatHang.Columns["ma"].Width = 80;
             dgvMatHang.Columns["ten"].HeaderText = @"Tên mặt hàng";
-
             dgvMatHang.Columns["ten"].Width = 250;
             dgvMatHang.Columns["loaimathang"].HeaderText = @"Loại mặt hàng";
             dgvMatHang.Columns["loaimathang"].Width = 150;
-
             dgvMatHang.Columns["donvitinh"].HeaderText = @"Đơn vị tính";
             dgvMatHang.Columns["donvitinh"].Width = 80;
             dgvMatHang.Columns["maquay"].HeaderText = @"Mã quầy";
@@ -628,7 +626,7 @@ namespace bai6quanlysieuthi.Views
             dgvNSX.DataSource = NhaCCController.Instance.XemNhaCC();
             dgvNSX.Columns["ma"].HeaderText = @"Mã ncc";
 
-            dgvNSX.Columns["ma"].Width = 45;
+            dgvNSX.Columns["ma"].Width = 80;
 
             dgvNSX.Columns["ten"].HeaderText = @"Tên ncc";
             dgvNSX.Columns["ten"].Width = 80;
@@ -640,7 +638,7 @@ namespace bai6quanlysieuthi.Views
             dgvNSX.Columns["sodienthoai"].Width = 50;
             dgvNSX.Columns["email"].HeaderText = @"Email";
 
-            dgvNSX.Columns["email"].Width = 100;
+            dgvNSX.Columns["email"].Width = 200;
 
         }
         private void btnView_NSX_Click(object sender, EventArgs e)
@@ -754,17 +752,17 @@ namespace bai6quanlysieuthi.Views
         {
             dgvXK.DataSource = XuatKhoController.Instance.XemXuatKho();
             dgvXK.Columns["ma"].HeaderText = @"Mã xuất kho";
-            dgvXK.Columns["ma"].Width = 145;
+            dgvXK.Columns["ma"].Width = 150;
             dgvXK.Columns["makhohang"].HeaderText = @"Mã kho hàng";
-            dgvXK.Columns["makhohang"].Width = 165;
+            dgvXK.Columns["makhohang"].Width = 170;
             dgvXK.Columns["ngayxuat"].HeaderText = @"Ngày xuất";
-            dgvXK.Columns["ngayxuat"].Width = 145;
+            dgvXK.Columns["ngayxuat"].Width = 150;
             dgvXK.Columns["tonggiatri"].HeaderText = @"Tổng giá trị";
             dgvXK.Columns["tonggiatri"].Width = 150;
             dgvXK.Columns["maquay"].HeaderText = @"Mã quầy";
             dgvXK.Columns["maquay"].Width = 120;
             dgvXK.Columns["manhanvien"].HeaderText = @"Mã nv";
-            dgvXK.Columns["manhanvien"].Width = 110;
+            dgvXK.Columns["manhanvien"].Width = 120;
         }
 
         private void dgvXK_CellClick(object sender, DataGridViewCellEventArgs e)
