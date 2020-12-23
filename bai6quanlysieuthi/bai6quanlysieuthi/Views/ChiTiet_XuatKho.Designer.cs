@@ -90,6 +90,10 @@
             // 
             this.cbMaMatHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMaMatHang.FormattingEnabled = true;
+            this.cbMaMatHang.Items.AddRange(new object[] {
+            "MH01",
+            "MH02",
+            "MH03"});
             this.cbMaMatHang.Location = new System.Drawing.Point(240, 107);
             this.cbMaMatHang.Margin = new System.Windows.Forms.Padding(4);
             this.cbMaMatHang.Name = "cbMaMatHang";
@@ -100,6 +104,10 @@
             // 
             this.cbMaXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMaXuat.FormattingEnabled = true;
+            this.cbMaXuat.Items.AddRange(new object[] {
+            "PX01",
+            "PX02",
+            "PX03"});
             this.cbMaXuat.Location = new System.Drawing.Point(240, 59);
             this.cbMaXuat.Margin = new System.Windows.Forms.Padding(4);
             this.cbMaXuat.Name = "cbMaXuat";

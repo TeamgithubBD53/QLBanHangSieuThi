@@ -673,9 +673,13 @@
             // 
             this.cbMaQuayXK.FormattingEnabled = true;
             this.cbMaQuayXK.Items.AddRange(new object[] {
-            "Q01",
-            "Q02",
-            "Q03"});
+            "Rau củ",
+            "Ướp lạnh",
+            "Hải sản",
+            "Gia cầm",
+            "Đồ khô",
+            "Đồ hộp",
+            "Da vị"});
             this.cbMaQuayXK.Location = new System.Drawing.Point(711, 15);
             this.cbMaQuayXK.Margin = new System.Windows.Forms.Padding(4);
             this.cbMaQuayXK.Name = "cbMaQuayXK";
@@ -689,7 +693,8 @@
             "NV01",
             "NV02",
             "NV03",
-            "NV04"});
+            "NV04",
+            "NV05"});
             this.cbMaNhanVienXk.Location = new System.Drawing.Point(216, 102);
             this.cbMaNhanVienXk.Margin = new System.Windows.Forms.Padding(4);
             this.cbMaNhanVienXk.Name = "cbMaNhanVienXk";
@@ -700,9 +705,11 @@
             // 
             this.cbMaKhoHangXk.FormattingEnabled = true;
             this.cbMaKhoHangXk.Items.AddRange(new object[] {
-            "K01",
-            "K02",
-            "K03"});
+            "KH01",
+            "KH02",
+            "KH03",
+            "KH04",
+            "KH05"});
             this.cbMaKhoHangXk.Location = new System.Drawing.Point(216, 54);
             this.cbMaKhoHangXk.Margin = new System.Windows.Forms.Padding(4);
             this.cbMaKhoHangXk.Name = "cbMaKhoHangXk";
@@ -964,10 +971,6 @@
             // cbMaQuay
             // 
             this.cbMaQuay.FormattingEnabled = true;
-            this.cbMaQuay.Items.AddRange(new object[] {
-            "Q01",
-            "Q02",
-            "Q03"});
             this.cbMaQuay.Location = new System.Drawing.Point(755, 14);
             this.cbMaQuay.Margin = new System.Windows.Forms.Padding(4);
             this.cbMaQuay.Name = "cbMaQuay";
