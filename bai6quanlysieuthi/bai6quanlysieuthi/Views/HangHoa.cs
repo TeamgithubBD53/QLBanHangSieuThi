@@ -254,9 +254,9 @@ namespace bai6quanlysieuthi.Views
             dgvQuayHang.Columns["ma"].Width = 45;
             dgvQuayHang.Columns["ten"].HeaderText = @"Tên quầy";
 
-            dgvQuayHang.Columns["ten"].Width = 100;
+            dgvQuayHang.Columns["ten"].Width = 120;
             dgvQuayHang.Columns["vitri"].HeaderText = @"Vị trí";
-            dgvQuayHang.Columns["vitri"].Width = 100;
+            dgvQuayHang.Columns["vitri"].Width = 120;
            
         }
 
@@ -266,9 +266,9 @@ namespace bai6quanlysieuthi.Views
             dgvQuayHang.Columns["ma"].HeaderText = @"Mã quầy";
             dgvQuayHang.Columns["ma"].Width = 45;
             dgvQuayHang.Columns["ten"].HeaderText = @"Tên quầy";
-            dgvQuayHang.Columns["ten"].Width = 100;
+            dgvQuayHang.Columns["ten"].Width = 120;
             dgvQuayHang.Columns["vitri"].HeaderText = @"Vị trí";
-            dgvQuayHang.Columns["vitri"].Width = 100;
+            dgvQuayHang.Columns["vitri"].Width = 120;
 
         }
         #endregion
@@ -385,7 +385,7 @@ namespace bai6quanlysieuthi.Views
                 {
                     if (QuayHangController.Instance.DeleteQuayHang(ma))
                     {
-                        MessageBox.Show("Sửa thành công");
+                        MessageBox.Show("Xoá thành công");
                         ViewQuayHang();
                     }
                 }
