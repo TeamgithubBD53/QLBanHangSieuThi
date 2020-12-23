@@ -54,7 +54,8 @@ namespace bai6quanlysieuthi.Controller
         // xóa chi tiết hóa đơn
         public bool DeleteCTHD(int stt)
         {
-            string query = string.Format("delete chitiethoadon where stt={0}", stt);
+            //string query = string.Format("delete chitiethoadon where stt={0}", stt);
+            string query = string.Format("exec proc_deleteCtHd N'{0}'", stt);
             return DataProvider.Instance.ExecuteNonQuery(query) > 0;
         }
         // tìm kiếm chi tiết hóa đon
